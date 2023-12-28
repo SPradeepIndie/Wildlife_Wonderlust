@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.home.HomeController">
+   <children>
+      <Pane layoutX="351.0" prefHeight="700.0" prefWidth="650.0">
+         <children>
+            <Button layoutX="325.0" layoutY="285.0" mnemonicParsing="false" onAction="#gotolocation1" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #213363;" text="LOCATION_1" textFill="WHITE" />
+            <Button layoutX="454.0" layoutY="421.0" mnemonicParsing="false" onAction="#gotolocation5" style="-fx-background-color: #213363;" text="LOCATION_5" textFill="WHITE" />
+            <Button layoutX="222.0" layoutY="519.0" mnemonicParsing="false" onAction="#gotolocation4" style="-fx-background-color: #213363;" text="LOCATION_4" textFill="WHITE" />
+            <Button layoutX="229.0" layoutY="377.0" mnemonicParsing="false" onAction="#gotolocation3" style="-fx-background-color: #213363;" text="LOCATION_3" textFill="WHITE" />
+            <Button layoutX="401.0" layoutY="565.0" mnemonicParsing="false" onAction="#gotolocation2" style="-fx-background-color: #213363;" text="LOCATION_2" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane prefHeight="700.0" prefWidth="351.0" style="-fx-background-color: #213363;">
+         <children>
+            <Label layoutX="30.0" layoutY="14.0" text="Your Best" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="67.0" text="Value" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="123.0" text="Proposition" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="30.0" layoutY="211.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delightful remarkably mr on announcing themselves entreaties favourable.About to in so terms voice at. Equal an would is found seems of. The particular friendship one sufficient terminated frequently themselves.It more shed went up is roof if loud case. Delay music in lived noise an. Beyond genius really enough passed is up." wrappingWidth="290.58909606933594">
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Label layoutX="30.0" layoutY="448.0" text="Select a location to continue" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
