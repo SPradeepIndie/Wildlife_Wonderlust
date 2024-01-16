@@ -14,17 +14,12 @@ import java.io.IOException;
 public class HomeController {
 
     @FXML
-
     private Stage stage;
     private Scene scene;
     private Parent root;
     @FXML
     private Label welcomeText;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     public void gotolocation1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("location1.fxml"));

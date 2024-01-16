@@ -57,21 +57,11 @@ public class Location1Controller {
         stage.show();
     }
 
-    public void location1seemore() throws IOException {
-        // Load the next.fxml file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("next.fxml"));
-        Parent root = loader.load();
-
-        // Create a new stage for the next.fxml content
-        Stage nextStage = new Stage();
-        nextStage.setScene(new Scene(root));
-        nextStage.setTitle("Next Window");
-
-        // Show the next stage
-        nextStage.show();
-
-        // Close the current stage (this.fxml window)
-        Stage thisStage = (Stage) root.getScene().getWindow();
-        thisStage.close();
+    public void seemore(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Location1_details.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

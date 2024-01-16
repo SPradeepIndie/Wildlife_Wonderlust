@@ -20,9 +20,9 @@ public class Location5Controller {
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+//    protected void onHelloButtonClick() {
+//        welcomeText.setText("Welcome to JavaFX Application!");
+//    }
 
     public void gotolocation1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("location1.fxml"));
@@ -56,5 +56,12 @@ public class Location5Controller {
         stage.show();
     }
 
+    public void seemore(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Location5_details.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

@@ -36,14 +36,14 @@
                     </font>
                 </Label>
                 <Text fill="WHITE" layoutX="30.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddddddcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccfffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeeeeeeeeeeeeeeeeeeeeeee" wrappingWidth="290.58909606933594" />
-                <Label layoutX="30.0" layoutY="448.0" prefHeight="31.0" prefWidth="203.0" text="Location 1" textFill="WHITE">
+                <Label layoutX="31.0" layoutY="447.0" text="Location_1" textFill="WHITE">
                     <font>
-                        <Font name="System Bold Italic" size="33.0" />
+                        <Font name="System Bold Italic" size="27.0" />
                     </font>
                 </Label>
-            <Button layoutX="30.0" layoutY="512.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" text="See more" textFill="#213363">
+            <Button layoutX="30.0" layoutY="504.0" mnemonicParsing="false" onAction="#seemore" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #ffffff;" text="See more" textFill="#213363">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Button>
             </children>
