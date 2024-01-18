@@ -1,0 +1,17 @@
+.locBtn.button{
+    -fx-background-color:  #213363;
+    -fx-background-radius: 16;
+}
+
+.locBtn.button:hover{
+    -fx-background-color: #4942E4;
+    -fx-background-radius: 16;
+}
+
+.locBtn.button:pressed{
+    -fx-background-color: red;
+    -fx-background-radius: 8;
+}
+
+
+
