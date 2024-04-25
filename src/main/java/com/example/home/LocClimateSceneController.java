@@ -6,11 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LocClimateSceneController {
+public class LocClimateSceneController extends DetailsHndling {
+    @FXML
+    private ScrollPane scrllPaneContent;
     @FXML
     private Stage stage;
     private Scene scene;
@@ -25,7 +29,15 @@ public class LocClimateSceneController {
     }
 
     public void details(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LocDetailScene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LocDetailScene.fxml"));
+
+        //Using Setter Method
+        LocDetailSceneController controller = new LocDetailSceneController();  // Create controller instance
+        fxmlLoader.setController(controller);  // Set controller to the loader
+
+        root = fxmlLoader.load();  // Load the scene
+        controller.addDetailContent();
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -39,6 +51,17 @@ public class LocClimateSceneController {
         stage.setScene(scene);
         stage.show();
     }
+    public void addClimateContent(){
+        super.select();
+        try{
+            FXMLLoader scrolPaneContentLaoder =new FXMLLoader(getClass().getResource(DetailsHndling.getcScrlPaneContentScene()));
+            VBox itemNode=scrolPaneContentLaoder.load();
+            scrllPaneContent.setContent(itemNode);
 
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
 }

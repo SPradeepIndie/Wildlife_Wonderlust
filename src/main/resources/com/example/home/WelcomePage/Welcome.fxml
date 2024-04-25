@@ -52,7 +52,7 @@
                   <Font name="System Bold Italic" size="27.0" />
                </font>
             </Label>
-            <Button id="seeMore_btn" fx:id="seeMore_btn" layoutX="26.0" layoutY="553.0" mnemonicParsing="false" onAction="#seemore" opacity="0.0" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #ffffff;" stylesheets="@../CSS/Welcome.css" text="" textFill="#213363">
+            <Button id="seeMore_btn" fx:id="seeMore_btn" layoutX="26.0" layoutY="553.0" mnemonicParsing="false" onAction="#seemore" opacity="0.0" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #ffffff;" styleClass="locBtn" stylesheets="@../CSS/Welcome.css" text="" textFill="#213363">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

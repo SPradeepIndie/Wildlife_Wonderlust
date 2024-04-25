@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class WelcomePageController {
+public class WelcomePageController extends DetailsHndling{
     @FXML
     private Stage stage;
     private Scene scene;
@@ -24,36 +24,21 @@ public class WelcomePageController {
     @FXML
     private Button seeMore_btn;
 
-    //hold the location name
-    private String locName;
-
     public void seemore(ActionEvent event) throws IOException {
         // Load the FXML loader for the target scene
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LocDetailScene.fxml"));
 
-        //Using Setter Method
+        //Using Setter Method dynamically load location details
         LocDetailSceneController controller = new LocDetailSceneController();  // Create controller instance
         fxmlLoader.setController(controller);  // Set controller to the loader
 
         root = fxmlLoader.load();  // Load the scene
+        controller.addDetailContent();
 
-        controller.setLocSelctor(locName);
-        controller.addContent();
-        
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-
-    }
-
-    public String getLocName() {
-        return locName;
-    }
-
-    public void setLocName(String locName) {
-        this.locName = locName;
     }
 
     //Methods to handle all location trigger button
@@ -62,34 +47,34 @@ public class WelcomePageController {
         loc_name.setText("Location1");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
-        setLocName("Location1");
+        DetailsHndling.setLocName("Location1");
     }
     @FXML
     private void handleLoc2ButtonClick(ActionEvent event) {
         loc_name.setText("Location2");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
-        setLocName("Location2");
+        DetailsHndling.setLocName("Location2");
     }
     @FXML
     private void handleLoc3ButtonClick(ActionEvent event) {
         loc_name.setText("Location3");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
-        setLocName("Location3");
+        DetailsHndling.setLocName("Location3");
     }
     @FXML
     private void handleLoc4ButtonClick(ActionEvent event) {
         loc_name.setText("Location4");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
-        setLocName("Location4");
+        DetailsHndling.setLocName("Location4");
     }
     @FXML
     private void handleLoc5ButtonClick(ActionEvent event) {
         loc_name.setText("Location5");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
-        setLocName("Location5");
+        DetailsHndling.setLocName("Location5");
     }
 }

@@ -9,5 +9,16 @@
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: bold; /* equivalent to 700 */
-
+}
+.btn:hover{
+    -fx-cursor: hand;
+    -fx-border-color: #FFB8B8;
+    -fx-border-radius: 46;
+    -fx-border-width: 3;
+}
+.goback{
+    -fx-background-color: black;
+}
+.goback:hover{
+    -fx-background-color: grey;
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -31,10 +32,14 @@
                     </font>
                 </Button>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: #000000; -fx-background-radius: 46;" styleClass="btn" text="&lt; Go Back" textFill="WHITE">
+            <Button id="goBack" mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="130.0" style="-fx-background-radius: 46;" text="&lt; Go Back" textFill="WHITE">
                 <font>
                     <Font size="20.0" />
                 </font>
+            <styleClass>
+               <String fx:value="btn" />
+               <String fx:value="goback" />
+            </styleClass>
             </Button>
         </HBox>
         <HBox prefHeight="42.0" prefWidth="619.0" styleClass="bgColor">

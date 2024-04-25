@@ -6,6 +6,7 @@
 .locBtn.button:hover{
     -fx-background-color: #4942E4;
     -fx-background-radius: 16;
+    -fx-cursor: hand;
 }
 
 .locBtn.button:pressed{

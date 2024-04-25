@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LocDetailSceneController {
+public class LocDetailSceneController extends DetailsHndling{
     @FXML
     private ScrollPane scrllPaneContent;
     @FXML
@@ -24,24 +24,10 @@ public class LocDetailSceneController {
     private Scene scene;
     private Parent root;
 
-    //hold the scrollpane content scene fxml file name
-    private String scrlPaneContentScene;
-
-    //get the selected location name from Welocme page
-    private String locSelctor;
-
-
     public ScrollPane getScrllPaneContent() {
         return scrllPaneContent;
     }
 
-    public String getLocSelctor() {
-        return locSelctor;
-    }
-
-    public void setLocSelctor(String locSelctor) {
-        this.locSelctor = locSelctor;
-    }
 
     public void goback(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("WelcomePage/Welcome.fxml"));
@@ -52,7 +38,16 @@ public class LocDetailSceneController {
     }
 
     public void climate(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LocClimateScene.fxml"));
+        // Load the FXML loader for the target scene
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LocClimateScene.fxml"));
+
+        //Using Setter Method dynamically load location details
+        LocClimateSceneController controller = new LocClimateSceneController();  // Create controller instance
+        fxmlLoader.setController(controller);  // Set controller to the loader
+
+        root = fxmlLoader.load();  // Load the scene
+        controller.addClimateContent();
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -67,19 +62,12 @@ public class LocDetailSceneController {
         stage.show();
     }
 
-    public void addContent(){
-      switch (locSelctor) {
-        case "Location1" -> scrlPaneContentScene = "Location1_details.fxml";
-        case "Location2" -> scrlPaneContentScene = "Location2_details.fxml";
-        case "Location3" -> scrlPaneContentScene = "Location3_details.fxml";
-        case "Location4" -> scrlPaneContentScene = "Location4_details.fxml";
-        case "Location5" -> scrlPaneContentScene = "Location5_details.fxml";
-        default -> System.out.println("location not set");
-        }
+    public void addDetailContent(){
+        super.select();
         try{
-            FXMLLoader scrolPaneContentLaoder =new FXMLLoader(getClass().getResource(scrlPaneContentScene));
+            FXMLLoader scrolPaneContentLaoder =new FXMLLoader(getClass().getResource(DetailsHndling.getdScrlPaneContentScene()));
             VBox itemNode=scrolPaneContentLaoder.load();
-            scrllPaneContent.setContent(itemNode);
+            scrllPaneContent.setContent(itemNode);//this scollpane id knows only that controller file
 
         } catch (IOException e) {
             throw new RuntimeException(e);

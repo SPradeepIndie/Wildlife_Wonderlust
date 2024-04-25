@@ -25,7 +25,15 @@ public class LocSilverOptionSceneController {
     }
 
     public void details(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LocDetailScene.fxml"));
+        // Load the FXML loader for the target scene
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LocDetailScene.fxml"));
+
+        //Using Setter Method dynamically load location details
+        LocDetailSceneController controller = new LocDetailSceneController();  // Create controller instance
+        fxmlLoader.setController(controller);  // Set controller to the loader
+
+        root = fxmlLoader.load();  // Load the scene
+        controller.addDetailContent();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
