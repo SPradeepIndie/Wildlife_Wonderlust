@@ -9,19 +9,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.home.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.home.WelcomePageController">
    <children>
       <Pane layoutX="351.0" prefHeight="700.0" prefWidth="650.0">
          <children>
             <ImageView fitHeight="700.0" fitWidth="666.0" layoutX="-16.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../Sri_Lanka_map.jpg" />
+                  <Image url="@../Image/Sri_Lanka_map.jpg" />
                </image></ImageView>
-            <Button layoutX="325.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleLoc1ButtonClick" styleClass="locBtn" stylesheets="@../../../home.css" text="LOCATION_1" textFill="WHITE" />
-            <Button layoutX="401.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleLoc2ButtonClick" styleClass="locBtn" stylesheets="@../../../home.css" text="LOCATION_2" textFill="WHITE" />
-            <Button layoutX="229.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleLoc3ButtonClick" styleClass="locBtn" stylesheets="@../../../home.css" text="LOCATION_3" textFill="WHITE" />
-            <Button layoutX="222.0" layoutY="519.0" mnemonicParsing="false" onAction="#handleLoc4ButtonClick" styleClass="locBtn" stylesheets="@../../../home.css" text="LOCATION_4" textFill="WHITE" />
-            <Button layoutX="454.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleLoc5ButtonClick" styleClass="locBtn" stylesheets="@../../../home.css" text="LOCATION_5" textFill="WHITE" />
+            <Button layoutX="325.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleLoc1ButtonClick" styleClass="locBtn" stylesheets="@../CSS/Welcome.css" text="LOCATION_1" textFill="WHITE" />
+            <Button layoutX="401.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleLoc2ButtonClick" styleClass="locBtn" stylesheets="@../CSS/Welcome.css" text="LOCATION_2" textFill="WHITE" />
+            <Button layoutX="229.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleLoc3ButtonClick" styleClass="locBtn" stylesheets="@../CSS/Welcome.css" text="LOCATION_3" textFill="WHITE" />
+            <Button layoutX="222.0" layoutY="519.0" mnemonicParsing="false" onAction="#handleLoc4ButtonClick" styleClass="locBtn" stylesheets="@../CSS/Welcome.css" text="LOCATION_4" textFill="WHITE" />
+            <Button layoutX="454.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleLoc5ButtonClick" styleClass="locBtn" stylesheets="@../CSS/Welcome.css" text="LOCATION_5" textFill="WHITE" />
          </children>
       </Pane>
       <Pane prefHeight="700.0" prefWidth="351.0" style="-fx-background-color: #213363; -fx-background-radius: 0 16 16 0;;">
@@ -52,7 +52,7 @@
                   <Font name="System Bold Italic" size="27.0" />
                </font>
             </Label>
-            <Button id="seeMore_btn" fx:id="seeMore_btn" layoutX="26.0" layoutY="553.0" mnemonicParsing="false" onAction="#seemore" opacity="0.0" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../home.css" text="" textFill="#213363">
+            <Button id="seeMore_btn" fx:id="seeMore_btn" layoutX="26.0" layoutY="553.0" mnemonicParsing="false" onAction="#seemore" opacity="0.0" prefHeight="29.0" prefWidth="92.0" style="-fx-background-color: #ffffff;" stylesheets="@../CSS/Welcome.css" text="" textFill="#213363">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

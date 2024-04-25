@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: red;" stylesheets="@CSS/Home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.home.LocClimateSceneController">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="1080.0" styleClass="bgColor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="42.0" spacing="39.0" styleClass="bgColor">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="877.0" style="-fx-background-color: #000000; -fx-background-radius: 0 46 46 0;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Button maxHeight="32.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="132.0" style="-fx-background-color: #17594A; -fx-background-radius: 0px 8px 8px 0px;" styleClass="btn" text="Details" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#silver" prefHeight="32.0" prefWidth="132.0" style="-fx-background-color: black;" styleClass="btn" text="Plan" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="17.0" />
+                            </HBox.margin>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: #000000; -fx-background-radius: 46;" styleClass="btn" text="&lt; Go Back" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="11.0" right="40.0" top="12.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="42.0" prefWidth="619.0" styleClass="bgColor">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="619.0" spacing="57.0" style="-fx-background-radius: 0 46 46 0;">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#details" prefHeight="32.0" prefWidth="199.0" style="-fx-background-radius: 46; -fx-background-color: #17594A;" styleClass="btn" text="Geographical State" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: #8EAC50; -fx-background-radius: 15 15 0 0;" styleClass="btn" text="Climate" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="17.0" right="17.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="17.0" prefWidth="1046.0" styleClass="bgColor">
+                    <children>
+                        <Pane prefHeight="11.0" prefWidth="1000.0" style="-fx-background-color: #8EAC50; -fx-background-radius: 0 37 0 0;" HBox.hgrow="ALWAYS" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="17.0" right="17.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" styleClass="bgColor" VBox.vgrow="ALWAYS">
+                    <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="574.0" prefWidth="1046.0" styleClass="bgColor" vbarPolicy="ALWAYS" HBox.hgrow="ALWAYS">
+                            <content>
+                                <AnchorPane>
+                                    <children>
+                                        <VBox maxHeight="-Infinity" prefHeight="574.0" prefWidth="1046.0" styleClass="bgColor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label text="Location_1 Climate" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="51.0" />
+                                                    </font>
+                                                    <VBox.margin>
+                                                        <Insets />
+                                                    </VBox.margin>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="17.0" right="17.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

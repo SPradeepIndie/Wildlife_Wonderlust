@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Location3_DetailsController {
+public class LocGoldOptionSceneController {
 
     @FXML
     private Stage stage;
@@ -18,15 +18,15 @@ public class Location3_DetailsController {
     private Parent root;
 
     public void goback(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("WelcomePage/Welcome.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void climate(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Location3_climate.fxml"));
+    public void details(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("LocDetailScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -34,7 +34,15 @@ public class Location3_DetailsController {
     }
 
     public void silver(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("location3main_silver.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LocSilverOptionScene.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void platinum(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("LocPlatinumOptionScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

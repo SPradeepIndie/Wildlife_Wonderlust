@@ -1,0 +1,13 @@
+.bgColor{
+    -fx-background-color: #213363;
+}
+.btn{
+    -fx-padding: 0;
+    -fx-text-fill: #FFF;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Calisto MT";
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: bold; /* equivalent to 700 */
+
+}
