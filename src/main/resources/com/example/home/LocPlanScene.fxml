@@ -170,7 +170,7 @@
                      </HBox>
                      <HBox alignment="CENTER_RIGHT">
                         <children>
-                                  <Button fx:id="priceCalBtn" mnemonicParsing="false" onAction="#priceCal" style="-fx-background-color: #8330E5;" text="Make My Price" textFill="WHITE">
+                                  <Button fx:id="priceCalBtn" mnemonicParsing="false"  style="-fx-background-color: #8330E5;" text="Make My Price" textFill="WHITE">
                                       <font>
                                           <Font name="System Bold" size="16.0" />
                                       </font>
