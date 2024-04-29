@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="574.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-      <ImageView fitHeight="462.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1046.0" text="Location_1" textFill="WHITE">
-          <font>
-              <Font name="System Bold" size="51.0" />
-          </font>
-          <VBox.margin>
-              <Insets />
-          </VBox.margin>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1271.0" prefWidth="1046.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="1064.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/yala1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="232.0" layoutY="629.0" text="YALA NATIONAL PARK" textFill="WHITE">
+         <font>
+            <Font size="58.0" />
+         </font>
       </Label>
-      <Label alignment="CENTER" prefHeight="169.0" prefWidth="1046.0" text="Label" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
-      <ImageView fitHeight="471.0" fitWidth="438.0" pickOnBounds="true" preserveRatio="true" />
-  </VBox>
+      <Text fill="WHITE" layoutX="73.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yala combines a strict nature reserve with a national park. Divided into 5 blocks, the park has a protected area of nearly 130,000 hectares of land consisting of light forests, scrubs, grasslands, tanks and lagoons. Two blocks are currently opened to the public.Situated in Sri Lanka’s south-east hugging the panoramic Indian Ocean, Yala was designated a wildlife sanctuary in 1900 and was designated a national park in 1938. Ironically, the park was initially used as a hunting ground for the elite under British rule. Yala is home to 44 varieties of mammal and 215 bird species. Among its more famous residents are the world’s biggest concentration of leopards, majestic elephants, sloth bears, sambars, jackals, spotted dear, peacocks, and crocodiles. The best time to visit Yala is between February and July when the water levels of the park are quite low, bringing animals into the open." textAlignment="JUSTIFY" wrappingWidth="900.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="277.0" fitWidth="421.0" layoutX="73.0" layoutY="952.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/yala2.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="573.0" layoutY="965.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It’s an experience of epic proportionsthat brings you up, close and personal with untamed world of wildlife. Whether you are an avid nature lover or visiting a wildlife park for the first time, if you come here with a mind that’s eager to explore and learn, you will go away with new-found meaning to life." textAlignment="JUSTIFY" wrappingWidth="400.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

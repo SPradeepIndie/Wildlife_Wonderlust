@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="574.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <ImageView fitHeight="462.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true" />
-    <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1046.0" text="Location_5_cliamte" textFill="WHITE">
-        <font>
-            <Font name="System Bold" size="51.0" />
-        </font>
-        <VBox.margin>
-            <Insets />
-        </VBox.margin>
-    </Label>
-    <Label alignment="CENTER" prefHeight="169.0" prefWidth="1046.0" text="Label" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
-    <ImageView fitHeight="471.0" fitWidth="438.0" pickOnBounds="true" preserveRatio="true" />
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1046.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="42.0" layoutY="36.0" text="CLIMATE at UDAWALAWE National Park..." textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="325.0" fitWidth="450.0" layoutX="42.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/udawalawa5.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="532.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The climate in the Park is characterised by seasonal rainfall and uniformly high temperature conditions. The average annual rainfall is about 1,500 mm in the south end, and it gradually increases towards the north. The annual average temperature is 32°C with no serious fluctuations being recorded." textAlignment="JUSTIFY" wrappingWidth="450.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="532.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two rainfall peaks occur in a year, one between April and May and the other between October and November. A short dry spell is experienced between February and March, and a prolonged dry period is observed from mid-May until the end of September." textAlignment="JUSTIFY" wrappingWidth="450.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label layoutX="42.0" layoutY="511.0" text="Best TIME to VISIT Udawalawe.." textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="42.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elephants at Udawalawe can be seen all year round but migrant birds can only be seen from November to March. The best time to visit is during the dry season when elephants come out in large numbers to the waterholes." textAlignment="JUSTIFY" wrappingWidth="600.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="206.0" fitWidth="378.0" layoutX="669.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/udawalawa6.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="185.0" fitWidth="617.0" layoutX="42.0" layoutY="781.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/udawalawa7.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

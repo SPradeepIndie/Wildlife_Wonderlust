@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="574.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <ImageView fitHeight="462.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true" />
-    <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1046.0" text="Location_3_cliamte" textFill="WHITE">
-        <font>
-            <Font name="System Bold" size="51.0" />
-        </font>
-        <VBox.margin>
-            <Insets />
-        </VBox.margin>
-    </Label>
-    <Label alignment="CENTER" prefHeight="169.0" prefWidth="1046.0" text="Label" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
-    <ImageView fitHeight="471.0" fitWidth="438.0" pickOnBounds="true" preserveRatio="true" />
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1046.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="46.0" layoutY="32.0" text="CLIMATE at WILPATTU National Park.." textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="250.0" fitWidth="676.0" layoutX="185.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/wilpattu5.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="123.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The annual temperature in the Park is around 27°C and its annual rainfall is approximately 1,000 mm. Though situated in the dry zone, the climate inside the Wilpattu National Park is very unlike that of the dry zone. The period from September to December is known as the rainy season in Wilpattu with the north east monsoon falling heavily. Inter-monsoonal rains come to Wilpattu between March and April. The period of drought in the Park extends from May to early September. Thus the best time for wildlife safaris at the Wilpattu National Park is during the months of February and October." textAlignment="JUSTIFY" wrappingWidth="800.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label layoutX="46.0" layoutY="618.0" text="Best TIME to Visit.." textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="123.0" layoutY="763.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This National Park can be visited throughout the year but for that optimal safari experience, a visit during the months of February and October is recommended." wrappingWidth="450.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="279.0" fitWidth="480.0" layoutX="644.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/wilpattu6.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -25,19 +25,19 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#silver" prefHeight="32.0" prefWidth="132.0" style="-fx-background-color: black;" styleClass="btn" text="Plan" textAlignment="CENTER" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#plan" prefHeight="32.0" prefWidth="132.0" style="-fx-background-color: black;" styleClass="btn" text="Plan" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: #000000; -fx-background-radius: 46;" text="&lt; Go Back" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="130.0" style="-fx-background-radius: 46;" text="&lt; Go Back" textFill="WHITE">
                 <font>
                     <Font size="20.0" />
                 </font>
             <styleClass>
                <String fx:value="goback" />
-               <String fx:value="goback" />
+               <String fx:value="btn" />
             </styleClass>
               
             </Button>

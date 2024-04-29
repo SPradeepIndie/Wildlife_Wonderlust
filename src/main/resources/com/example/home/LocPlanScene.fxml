@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: red;" stylesheets="@CSS/Home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.home.LocPlanSceneController">
+    <VBox prefHeight="200.0" prefWidth="1080.0" styleClass="bgColor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER" prefHeight="42.0" spacing="39.0" styleClass="bgColor">
+            <VBox.margin>
+                <Insets bottom="11.0" right="40.0" top="12.0" />
+            </VBox.margin>
+            <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="877.0" style="-fx-background-color: #000000; -fx-background-radius: 0 46 46 0;" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets left="17.0" />
+                </HBox.margin>
+                <Button maxHeight="32.0" mnemonicParsing="false" onAction="#details" prefHeight="32.0" prefWidth="132.0" style="-fx-background-color: black; -fx-background-radius: 0px 8px 8px 0px;" styleClass="btn" text="Details" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="132.0" style="-fx-background-color: #17594A; -fx-background-radius: 46;" styleClass="btn" text="Plan" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <Button id="goBack" mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="130.0" style="-fx-background-radius: 46;" text="&lt; Go Back" textFill="WHITE">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            <styleClass>
+               <String fx:value="btn" />
+               <String fx:value="goback" />
+            </styleClass>
+            </Button>
+        </HBox>
+        <HBox prefHeight="42.0" prefWidth="619.0" styleClass="bgColor">
+            <VBox.margin>
+                <Insets left="17.0" right="17.0" />
+            </VBox.margin>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="876.0" spacing="57.0" style="-fx-background-radius: 0 46 46 0;" stylesheets="@CSS/Plan.css">
+                <Button fx:id="silverBtn" mnemonicParsing="false" onAction="#silver" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: ABABAB;" text="Silver" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="optionBtn" />
+               </styleClass>
+                </Button>
+                <Button fx:id="goldBtn" mnemonicParsing="false" onAction="#gold" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: D3D04F;" text="Gold" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="optionBtn" />
+               </styleClass>
+                </Button>
+            <Button fx:id="platinumBtn" layoutX="266.0" layoutY="15.0" mnemonicParsing="false" onAction="#platinum" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #878585;" text="Platinum" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="optionBtn" />
+               </styleClass>
+            </Button>
+            </HBox>
+        </HBox>
+        <HBox prefHeight="17.0" prefWidth="1046.0" styleClass="bgColor">
+            <VBox.margin>
+                <Insets left="17.0" right="17.0" />
+            </VBox.margin>
+            <Pane prefHeight="11.0" prefWidth="1000.0" style="-fx-background-color: ABABAB; -fx-background-radius: 0 37 0 0;" HBox.hgrow="ALWAYS" />
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="1046.0" styleClass="bgColor" VBox.vgrow="ALWAYS">
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="574.0" prefWidth="1046.0" styleClass="bgColor" vbarPolicy="ALWAYS" HBox.hgrow="ALWAYS">
+                 <VBox fx:id="planVboxContainer" fillWidth="false" maxHeight="-Infinity" prefHeight="574.0" prefWidth="1046.0" spacing="18.0" stylesheets="@CSS/Plan.css">
+               <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="1046.0" style="-fx-padding: 0;">
+                  <children>
+                            <Label fx:id="locationNameLabel" text="Location" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="36.0" />
+                                </font>
+                            </Label>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="price">
+                  <children>
+                            <Label prefHeight="50.0" prefWidth="340.0" text="Maximum Price " HBox.hgrow="NEVER">
+                                <font>
+                                    <Font name="Kristen ITC" size="31.0" />
+                                </font>
+                            </Label>
+                     <Label fx:id="maxPrice" text="10 000" HBox.hgrow="NEVER">
+                        <font>
+                           <Font size="31.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+               <VBox prefHeight="223.0" prefWidth="1046.0" styleClass="req">
+                  <children>
+                     <Label text="Your Requirement">
+                        <font>
+                           <Font name="System Bold" size="48.0" />
+                        </font>
+                     </Label>
+                     <HBox alignment="CENTER">
+                        <children>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                              <children>
+                                         <Label fx:id="hotelName" text="Hotel Name">
+                                             <font>
+                                                 <Font name="System Bold" size="18.0" />
+                                             </font>
+                                         </Label>
+                                 <ChoiceBox fx:id="hotelName" prefWidth="200.0" />
+                                 <Label prefWidth="200.0" text="Select a hotel you wish to spend your time" wrapText="true">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                 </Label>
+                              </children>
+                           </VBox>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                              <children>
+                                         <Label fx:id="days" text="Days">
+                                             <font>
+                                                 <Font name="System Bold" size="18.0" />
+                                             </font>
+                                         </Label>
+                                 <ChoiceBox fx:id="Days" prefWidth="200.0" />
+                                 <Label prefWidth="200.0" text="How  many days do you wish to stay" wrapText="true">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                 </Label>
+                              </children>
+                           </VBox>
+                           <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                              <children>
+                                         <Label fx:id="members" text="Members">
+                                             <font>
+                                                 <Font name="System Bold" size="18.0" />
+                                             </font>
+                                         </Label>
+                                 <ChoiceBox fx:id="members" prefWidth="200.0" />
+                                 <Label prefWidth="200.0" text="How many members with you" wrapText="true">
+                                    <font>
+                                       <Font size="18.0" />
+                                    </font>
+                                 </Label>
+                              </children>
+                           </VBox>
+                        </children>
+                        <padding>
+                           <Insets left="20.0" right="20.0" />
+                        </padding>
+                     </HBox>
+                     <HBox alignment="CENTER_RIGHT">
+                        <children>
+                                  <Button fx:id="priceCalBtn" mnemonicParsing="false" onAction="#priceCal" style="-fx-background-color: #8330E5;" text="Make My Price" textFill="WHITE">
+                                      <font>
+                                          <Font name="System Bold" size="16.0" />
+                                      </font>
+                                  </Button>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="price">
+                  <children>
+                            <Label contentDisplay="CENTER" prefHeight="56.0" prefWidth="360.0" text="Your Price  " textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="39.0" />
+                                </font>
+                            </Label>
+                     <Label fx:id="myPrice" text="5000">
+                        <font>
+                           <Font size="31.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <styleClass>
+                  <String fx:value="bgColor" />
+                  <String fx:value="img" />
+               </styleClass>
+                 </VBox>
+            </ScrollPane>
+         <VBox.margin>
+            <Insets left="17.0" right="17.0" />
+         </VBox.margin>
+        </HBox>
+    </VBox>
+</AnchorPane>

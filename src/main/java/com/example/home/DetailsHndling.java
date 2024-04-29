@@ -1,6 +1,11 @@
 package com.example.home;
 
+import java.util.HashMap;
+
 public class DetailsHndling {
+
+    private static final HashMap<String, String> locNameToTtitle = new HashMap<>();
+
     //hold the location name
     private static String locName;
     private static String dScrlPaneContentScene;
@@ -30,6 +35,9 @@ public class DetailsHndling {
     }
     //select loaction detail fxml or climate fxml according to the loc name
     public void select(){
+        //for initialize the hashmap
+        dataMap(getLocNameToTtitle());
+
         switch (getLocName()) {
             case "Location1" :
                 setdScrlPaneContentScene("Location1_details.fxml");
@@ -57,4 +65,22 @@ public class DetailsHndling {
         }
     }
 
+    //getter for hashmap
+    public static HashMap<String, String> getLocNameToTtitle() {
+        return locNameToTtitle;
+    }
+
+    //method for initilize the hashmap fo rkey values
+    public void dataMap(HashMap<String, String> l){
+        l.put("Location1","YALA NATIONAL PARK");
+        l.put("Location2","KUMANA NATIONAL PARK");
+        l.put("Location3","WILPATTU NATIONAL PARK");
+        l.put("Location4","SINHARAJA RAIN FOREST");
+        l.put("Location5","UDAWALAWE NATIONAL PARK");
+    }
+
+    //give the value for specific key value
+    public static String getTitle(String key){
+        return getLocNameToTtitle().get(key);
+    }
 }

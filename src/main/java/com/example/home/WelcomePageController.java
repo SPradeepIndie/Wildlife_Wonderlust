@@ -44,35 +44,35 @@ public class WelcomePageController extends DetailsHndling{
     //Methods to handle all location trigger button
     @FXML
     private void handleLoc1ButtonClick(ActionEvent event) {
-        loc_name.setText("Location1");
+        loc_name.setText("Yala National Park");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
         DetailsHndling.setLocName("Location1");
     }
     @FXML
     private void handleLoc2ButtonClick(ActionEvent event) {
-        loc_name.setText("Location2");
+        loc_name.setText("Kumana National Park");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
         DetailsHndling.setLocName("Location2");
     }
     @FXML
     private void handleLoc3ButtonClick(ActionEvent event) {
-        loc_name.setText("Location3");
+        loc_name.setText("Wilpattu National Park");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
         DetailsHndling.setLocName("Location3");
     }
     @FXML
     private void handleLoc4ButtonClick(ActionEvent event) {
-        loc_name.setText("Location4");
+        loc_name.setText("Sinharaja Rain Forest");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
         DetailsHndling.setLocName("Location4");
     }
     @FXML
     private void handleLoc5ButtonClick(ActionEvent event) {
-        loc_name.setText("Location5");
+        loc_name.setText("Udawalawe National Park");
         seeMore_btn.setOpacity(1);
         seeMore_btn.setText("See more");
         DetailsHndling.setLocName("Location5");
