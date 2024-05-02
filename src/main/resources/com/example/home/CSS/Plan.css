@@ -33,3 +33,14 @@
     -fx-background-color: rgba(217, 217, 217, 0.80);
     /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
 }
+.priceCalBtn{
+    -fx-background-color:  #8330E5;
+    -fx-background-radius: 15px;
+}
+.priceCalBtn:hover{
+    -fx-background-color:  #8330E5;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2;
+    -fx-border-color: pink;
+}

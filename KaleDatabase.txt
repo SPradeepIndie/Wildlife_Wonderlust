@@ -1,0 +1,106 @@
+CREATE DATABASE wildLifeDb;
+
+use wildLifeDb;
+
+CREATE TABLE location(l_id char(9) PRIMARY KEY, l_name varchar(40));
+INSERT INTO location VALUES	("Location1","YALA NATIONAL PARK"),
+			  	("Location2","KUMANA NATIONAL PARK"),
+				("Location3","WILPATTU NATIONAL PARK"),
+				("Location4","SINHARAJA RAIN FOREST"),
+				("Location5","UDAWALAWE NATIONAL PARK");
+
+
+
+CREATE TABLE Package(l_id char(9),p_name varchar(20), price int,PRIMARY KEY (l_id,p_name));
+INSERT INTO Package VALUES
+                ("Location1","silver",10000),
+				("Location1","gold",20000),
+				("Location1","platinum",30000),
+				("Location2","silver",15000),
+                ("Location2","gold",20000),
+                ("Location2","platinum",35000),
+                ("Location3","silver",8000),
+                ("Location3","gold",14000),
+                ("Location3","platinum",25000),
+                ("Location4","silver",17000),
+                ("Location4","gold",27000),
+                ("Location4","platinum",37000),
+                ("Location5","silver",14000),
+                ("Location5","gold",20000),
+                ("Location5","platinum",24000);
+
+
+CREATE TABLE Hotel(h_id char(3) PRIMARY KEY, h_name varchar(20));
+INSERT INTO Hotel VALUES ('h01', 'Starlight Retreat'),
+                          ('h02', 'Willow Grove Inn'),
+                          ('h03', 'Azure Cove Resort'),
+                          ('h04', 'Evergreen Oasis'),
+                          ('h05', 'Harmony Hills Hotel'),
+                          ('h06', 'Serenade Suites'),
+                          ('h07', 'Maple Leaf Lodge'),
+                          ('h08', 'Sunset Shores Hotel'),
+                          ('h09', 'Jasmine Breeze Inn'),
+                          ('h10', 'Emerald Crest Resort'),
+                          ('h11', 'Birchwood Retreat'),
+                          ('h12', 'Sapphire Sands Hotel'),
+                          ('h13', 'Lavender Loft'),
+                          ('h14', 'Hawthorn Haven'),
+                          ('h15', 'Amethyst Oasis'),
+                          ('h16', 'Oakwood Escape'),
+                          ('h17', 'Ivory Towers Hotel'),
+                          ('h18', 'Rosewood Retreat');
+
+
+CREATE TABLE Price(h_id char(3), l_id char(9), p_name char(20), price int,PRIMARY KEY(h_id,l_id,p_name));
+INSERT INTO Hotel VALUES
+                    ("h01", "Location1", "silver", 2345),
+                    ("h02", "Location1", "silver", 2345),
+                    ("h03", "Location1", "silver", 2789),
+                    ("h01", "Location1", "gold", 2789),
+                    ("h02", "Location1", "gold", 3456),
+                    ("h03", "Location1", "gold", 3456),
+                    ("h01", "Location1", "platinum", 3789),
+                    ("h02", "Location1", "platinum", 3789),
+                    ("h03", "Location1", "platinum", 4123),
+
+                    ("h04", "Location2", "silver", 4123),
+                    ("h05", "Location2", "silver", 4456),
+                    ("h06", "Location2", "silver", 4456),
+                    ("h04", "Location2", "gold", 4789),
+                    ("h05", "Location2", "gold", 4789),
+                    ("h06", "Location2", "gold", 4912),
+                    ("h04", "Location2", "platinum", 4912),
+                    ("h05", "Location2", "platinum", 4912),
+                    ("h06", "Location2", "platinum", 4912),
+
+                    ("h07", "Location3", "silver", 2123),
+                    ("h08", "Location3", "silver", 2456),
+                    ("h09", "Location3", "silver", 2456),
+                    ("h07", "Location3", "gold", 2789),
+                    ("h08", "Location3", "gold", 2789),
+                    ("h09", "Location3", "gold", 3123),
+                    ("h07", "Location3", "platinum", 3123),
+                    ("h08", "Location3", "platinum", 3456),
+                    ("h09", "Location3", "platinum", 3456),
+
+                    ("h10", "Location4", "silver", 3789),
+                    ("h11", "Location4", "silver", 3789),
+                    ("h12", "Location4", "silver", 4123),
+                    ("h10", "Location4", "gold", 4123),
+                    ("h11", "Location4", "gold", 4456),
+                    ("h12", "Location4", "gold", 4456),
+                    ("h10", "Location4", "platinum", 4789),
+                    ("h11", "Location4", "platinum", 4789),
+                    ("h12", "Location4", "platinum", 4912),
+
+                    ("h13", "Location5", "silver", 2123),
+                    ("h14", "Location5", "silver", 2456),
+                    ("h15", "Location5", "silver", 2456),
+                    ("h13", "Location5", "gold", 2789),
+                    ("h14", "Location5", "gold", 2789),
+                    ("h15", "Location5", "gold", 3123),
+                    ("h16", "Location5", "platinum", 3123),
+                    ("h17", "Location5", "platinum", 3456),
+                    ("h18", "Location5", "platinum", 3456);
+
+

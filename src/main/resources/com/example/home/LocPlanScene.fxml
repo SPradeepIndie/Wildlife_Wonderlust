@@ -126,7 +126,7 @@
                                                  <Font name="System Bold" size="18.0" />
                                              </font>
                                          </Label>
-                                 <ChoiceBox fx:id="hotelName" prefWidth="200.0" />
+                                 <ChoiceBox fx:id="hotelChoBox" prefWidth="200.0" />
                                  <Label prefWidth="200.0" text="Select a hotel you wish to spend your time" wrapText="true">
                                     <font>
                                        <Font size="18.0" />
@@ -141,7 +141,10 @@
                                                  <Font name="System Bold" size="18.0" />
                                              </font>
                                          </Label>
-                                 <TextField fx:id="dayTextField" prefWidth="200.0" />
+                                 <TextField fx:id="dayTextField" prefWidth="200.0">
+                                    <font>
+                                       <Font name="System Bold" size="14.0" />
+                                    </font></TextField>
                                  <Label prefWidth="200.0" text="How  many days do you wish to stay" wrapText="true">
                                     <font>
                                        <Font size="18.0" />
@@ -159,7 +162,10 @@
                                                  <Font name="System Bold" size="18.0" />
                                              </font>
                                          </Label>
-                                 <TextField fx:id="memberTextField" prefWidth="200.0" />
+                                 <TextField fx:id="memberTextField" prefWidth="200.0">
+                                    <font>
+                                       <Font name="System Bold" size="14.0" />
+                                    </font></TextField>
                                  <Label prefWidth="200.0" text="How many members with you" wrapText="true">
                                     <font>
                                        <Font size="18.0" />
@@ -177,7 +183,7 @@
                      </HBox>
                      <HBox alignment="CENTER_RIGHT">
                         <children>
-                                  <Button fx:id="priceCalBtn" mnemonicParsing="false" style="-fx-background-color: #8330E5;" text="Make My Price" textFill="WHITE">
+                                  <Button fx:id="priceCalBtn" mnemonicParsing="false" onAction="#priceCal" styleClass="priceCalBtn" text="Make My Price" textFill="WHITE">
                                       <font>
                                           <Font name="System Bold" size="16.0" />
                                       </font>
@@ -193,9 +199,9 @@
                                     <Font name="System Bold" size="39.0" />
                                 </font>
                             </Label>
-                     <Label fx:id="myPrice" text="5000">
+                     <Label fx:id="myPrice" prefHeight="46.0" prefWidth="477.0" text="please select a hotel">
                         <font>
-                           <Font size="31.0" />
+                           <Font name="System Bold" size="31.0" />
                         </font>
                      </Label>
                   </children>

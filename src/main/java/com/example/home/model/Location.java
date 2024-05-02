@@ -1,6 +1,5 @@
 package com.example.home.model;
 
-import java.security.PrivateKey;
 
 public class Location {
     private String l_id;

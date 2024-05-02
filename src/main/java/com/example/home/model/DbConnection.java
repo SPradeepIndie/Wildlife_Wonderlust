@@ -10,11 +10,13 @@ public class DbConnection {
     private DbConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection=DriverManager.getConnection("\"jdbc:mysql://localhost:3306/wildLifeDB\", \"root\", \"\"");
+            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/wildLifeDB", "root", "");
             System.out.println("Connection successfull");
         } catch (ClassNotFoundException e) {
+            System.out.println("Drivers not found");
             throw new RuntimeException(e);
         } catch (SQLException e) {
+            System.out.println("Connection error!check database");
             throw new RuntimeException(e);
         }
     }
