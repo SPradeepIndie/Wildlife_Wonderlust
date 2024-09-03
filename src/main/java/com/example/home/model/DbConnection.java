@@ -6,7 +6,6 @@ public class DbConnection {
     private static DbConnection instance=null;
     private Connection connection;
 
-    //private constructor for make the DbConnection class a singleton
     private DbConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -33,7 +33,7 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
     private ResultSet rs;
     private String query;
 
-    //for gloable use of pakage name in this class
+    //for global use of package name in this class
     private String pkgNameGlobal;
 
     @FXML
@@ -59,7 +59,8 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
 
     //injector for max price label
     @FXML
-    private Label maxPrice;
+    private Label maxPriceLbl;
+    private double maxPrice;
 
     //injector for ChoiceBox
     @FXML
@@ -78,6 +79,9 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        platinumBtn.getStyleClass().remove("selectedOptionBtn");
+        goldBtn.getStyleClass().remove("selectedOptionBtn");
+        silverBtn.getStyleClass().add("selectedOptionBtn");
         locationNameLabel.setText(DetailsHndling.getTitle(DetailsHndling.getLocName()));
         planVboxContainer.getStyleClass().add("silverImg");
         setPkgNameGlobal("silver");
@@ -94,7 +98,7 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
     }
 
     public void goback(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("WelcomePage/Welcome.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("WelcomePage/Welcome.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -128,10 +132,10 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
             ps.setString(2,getPkgNameGlobal());
             rs=ps.executeQuery();
             if(rs.next()){
-                maxPrice.setText(rs.getString("price"));
-            }else{
-                //test the backend database have the data
-                System.out.println("No price for "+DetailsHndling.getLocName()+getPkgNameGlobal());
+                String maxPriceStr=rs.getString("price");
+                maxPrice=Double.parseDouble(maxPriceStr);
+                maxPriceLbl.setText(maxPriceStr);
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -145,57 +149,60 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
             ps.setString(2,getPkgNameGlobal());
             rs=ps.executeQuery();
             while(rs.next()){
-                //System.out.println(rs.getString("h_name"));
                 hotelChoBox.getItems().add((rs.getString("h_name")));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-@FXML
-public void priceCal(ActionEvent event){
-    double dayCount=1.0;
-    double memberCount=1.0;
-    query =  "SELECT price FROM Hotel h INNER JOIN Price p ON h.h_id = p.h_id WHERE h.h_name=? AND p.p_name =?;";
-    try {
-        ps= conn.prepareStatement(query);
-        ps.setString(1,hotelChoBox.getValue());
-        ps.setString(2,getPkgNameGlobal());
-        rs=ps.executeQuery();
-        if(rs.next()){
-            double oneD_oneM= Double.parseDouble(rs.getString("price"));
-            if(!Objects.equals(dayTextField.getText(), "") && !Objects.equals(memberTextField.getText(), "")) {
-                dayCount = Double.parseDouble(dayTextField.getText());
-                memberCount = Double.parseDouble(memberTextField.getText());
-            }
-            else{
-                setFieldValue("1");
-            }
+    @FXML
+    public void priceCal(ActionEvent event){
+        double dayCount=1.0;
+        double memberCount=1.0;
+        query =  "SELECT price FROM Hotel h INNER JOIN Price p ON h.h_id = p.h_id WHERE h.h_name=? AND p.p_name =?;";
+        try {
+            ps= conn.prepareStatement(query);
+            ps.setString(1,hotelChoBox.getValue());
+            ps.setString(2,getPkgNameGlobal());
+            rs=ps.executeQuery();
+            if(rs.next()){
+                double oneD_oneM= Double.parseDouble(rs.getString("price"));
+                if(!Objects.equals(dayTextField.getText(), "") && !Objects.equals(memberTextField.getText(), "")) {
+                    dayCount = Double.parseDouble(dayTextField.getText());
+                    memberCount = Double.parseDouble(memberTextField.getText());
+                }
+                else{
+                    setFieldValue("1");
+                }
+                double calVal=oneD_oneM*memberCount*dayCount;
 
-            myPrice.setText(String.valueOf(oneD_oneM*memberCount*dayCount));
-        }else{
-            myPrice.setText("please select a hotel");
-            //System.out.println("No price for "+hotelChoBox.getValue()+" "+getPkgNameGlobal());
+                if(calVal>maxPrice){
+                    myPrice.setText("price is too high! Select next package");
+                }else{
+                    myPrice.setText(String.valueOf(calVal));
+                }
+
+            }else{
+                myPrice.setText("please select a hotel");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-    } catch (SQLException e) {
-        throw new RuntimeException(e);
     }
-}
 
-public void setFieldValue(String val){
-    dayTextField.setText(val);
-    memberTextField.setText(val);
-}
-
-//remove the choice box item before load the new items to it
-public void removeFromChoiceBox(){
-    List<String> itemsToRemove = new ArrayList<>();
-    for (String item : hotelChoBox.getItems()) {
-            itemsToRemove.add(item);
+    public void setFieldValue(String val){
+        dayTextField.setText(val);
+        memberTextField.setText(val);
     }
-    //System.out.println(itemsToRemove);
-    hotelChoBox.getItems().removeAll(itemsToRemove);
-}
+
+    //remove the choice box item before load the new items to it
+    public void removeFromChoiceBox(){
+        List<String> itemsToRemove = new ArrayList<>();
+        for (String item : hotelChoBox.getItems()) {
+                itemsToRemove.add(item);
+        }
+        hotelChoBox.getItems().removeAll(itemsToRemove);
+    }
     public void gold(ActionEvent event){
         removeFromChoiceBox();
         setPkgNameGlobal("gold");
@@ -205,9 +212,11 @@ public void removeFromChoiceBox(){
         planVboxContainer.getStyleClass().remove("platinumImg");
         planVboxContainer.getStyleClass().remove("silverImg");
         planVboxContainer.getStyleClass().add("goldImg");
+        platinumBtn.getStyleClass().remove("selectedOptionBtn");
+        goldBtn.getStyleClass().add("selectedOptionBtn");
+        silverBtn.getStyleClass().remove("selectedOptionBtn");
 
     }
-
     public void platinum(ActionEvent event){
         removeFromChoiceBox();
         setPkgNameGlobal("platinum");
@@ -217,6 +226,9 @@ public void removeFromChoiceBox(){
         planVboxContainer.getStyleClass().remove("goldImg");
         planVboxContainer.getStyleClass().remove("silverImg");
         planVboxContainer.getStyleClass().add("platinumImg");
+        platinumBtn.getStyleClass().add("selectedOptionBtn");
+        goldBtn.getStyleClass().remove("selectedOptionBtn");
+        silverBtn.getStyleClass().remove("selectedOptionBtn");
 
     }
     public void silver(ActionEvent event)  {
@@ -228,5 +240,8 @@ public void removeFromChoiceBox(){
         planVboxContainer.getStyleClass().remove("goldImg");
         planVboxContainer.getStyleClass().remove("platinumImg");
         planVboxContainer.getStyleClass().add("silverImg");
+        platinumBtn.getStyleClass().remove("selectedOptionBtn");
+        goldBtn.getStyleClass().remove("selectedOptionBtn");
+        silverBtn.getStyleClass().add("selectedOptionBtn");
     }
 }

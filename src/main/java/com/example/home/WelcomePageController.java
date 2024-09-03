@@ -36,6 +36,7 @@ public class WelcomePageController extends DetailsHndling{
         controller.addDetailContent();
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setResizable(true);
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

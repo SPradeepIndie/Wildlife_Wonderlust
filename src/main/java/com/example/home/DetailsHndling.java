@@ -14,15 +14,12 @@ public class DetailsHndling {
     public static String getdScrlPaneContentScene() {
         return dScrlPaneContentScene;
     }
-
     public static void setdScrlPaneContentScene(String dScrlPaneContentScene) {
         DetailsHndling.dScrlPaneContentScene = dScrlPaneContentScene;
     }
-
     public static String getcScrlPaneContentScene() {
         return cScrlPaneContentScene;
     }
-
     public static void setcScrlPaneContentScene(String cScrlPaneContentScene) {
         DetailsHndling.cScrlPaneContentScene = cScrlPaneContentScene;
     }
@@ -33,11 +30,11 @@ public class DetailsHndling {
     public static void setLocName(String locName) {
         DetailsHndling.locName = locName;
     }
+
     //select loaction detail fxml or climate fxml according to the loc name
     public void select(){
         //for initialize the hashmap
         dataMap(getLocNameToTtitle());
-
         switch (getLocName()) {
             case "Location1" :
                 setdScrlPaneContentScene("Location1_details.fxml");
