@@ -1,63 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1271.0" prefWidth="1046.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="407.0" fitWidth="1046.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/udawalawa1.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="105.0" layoutY="450.0" text="UDAWALAWE NATIONAL PARK" textFill="WHITE">
-         <font>
-            <Font size="58.0" />
-         </font>
-      </Label>
-      <Text fill="WHITE" layoutX="73.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Udawalawe National Park is the third most visited Park in Sri Lanka. The varied habitats in Udawalawe make it home to a diverse spectrum of animals. The main attraction at Udawalawe however are the elephants, with a herd of 600 to 700 elephants believed to be residents of the Park. The Udawalawe National Park is home to many more species of Sri Lankan wildlife which include the endemic Toque Macaque and the Sri Lankan Leopard – though the latter is seen very rarely. The Sri Lankan Sloth Bear has been recorded as well, but it is seldom seen. There are numerous species of birds, some of which are endemic along with fish, reptiles and amphibians." textAlignment="JUSTIFY" wrappingWidth="900.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="73.0" layoutY="759.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Udawalawe National Park is famed for its resident population of Sri Lankan elephants (a recognised subspecies of its Asian counterpart), and it is not unusual to see herds gather to feed and bathe at the waterholes while on even the shortest of safaris at the Udawalawe National Park. With approximately 600 to 700 Sri Lankan elephants residing within the confines of this wildlife park, it is an amazing and unforgettable experience to witness these elephants, both adults and young in their natural habitat." textAlignment="JUSTIFY" wrappingWidth="600.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="219.0" fitWidth="280.0" layoutX="693.0" layoutY="702.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/udawalawa2.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="73.0" layoutY="924.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/udawalawa3.jpg" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" layoutX="286.0" layoutY="942.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Udawalawe is home to Sri Lankan wildlife such as the Rusty-spotted Cat, Fishing Cat and the Sri Lankan Leopard. Other species include the Sri Lankan Sambar Deer, Sri Lankan Axis Deer, Indian Muntjac, Sri Lankan Spotted Chevrotain, Wild Boar and Water Buffalo. " textAlignment="JUSTIFY" wrappingWidth="700.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="286.0" layoutY="1031.0" strokeType="OUTSIDE" strokeWidth="0.0" text="An incredible total of 183 bird species have been recorded as inhabiting the Park, wile many others pass through on their migratory routes, making Udawalawe a great place for a memorable bird safari." textAlignment="JUSTIFY" wrappingWidth="700.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="73.0" layoutY="1123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endemic Flora in Udawalawe National Park Sri Lanka is rich and varied. Originally densely forested, savannah grasslands and thorn-scrub now predominate the Park. Much of the forest was destroyed by chena - slash and burn - cultivation. Scattered trees, constituting 20 – 50 percent of existing cover, are mainly Satin, Ehala and Lunumidella. In the riverine forest, Kumbuk and the endemic Mandorang trees are dominant." textAlignment="JUSTIFY" wrappingWidth="650.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="158.0" fitWidth="240.0" layoutX="746.0" layoutY="1080.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/udawalawa4.jpg" />
-         </image>
-      </ImageView>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <ImageView fitHeight="407.0" fitWidth="1046.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/udawalawa1.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label text="UDAWALAWE NATIONAL PARK" textFill="WHITE">
+                     <font>
+                        <Font size="58.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="47.0" top="47.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The Udawalawe National Park is the third most visited Park in Sri Lanka. The varied habitats in Udawalawe make it home to a diverse spectrum of animals. The main attraction at Udawalawe however are the elephants, with a herd of 600 to 700 elephants believed to be residents of the Park. The Udawalawe National Park is home to many more species of Sri Lankan wildlife which include the endemic Toque Macaque and the Sri Lankan Leopard – though the latter is seen very rarely. The Sri Lankan Sloth Bear has been recorded as well, but it is seldom seen. There are numerous species of birds, some of which are endemic along with fish, reptiles and amphibians." textAlignment="JUSTIFY" wrappingWidth="900.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The Udawalawe National Park is famed for its resident population of Sri Lankan elephants (a recognised subspecies of its Asian counterpart), and it is not unusual to see herds gather to feed and bathe at the waterholes while on even the shortest of safaris at the Udawalawe National Park. With approximately 600 to 700 Sri Lankan elephants residing within the confines of this wildlife park, it is an amazing and unforgettable experience to witness these elephants, both adults and young in their natural habitat." textAlignment="JUSTIFY" wrappingWidth="600.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="219.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/udawalawa2.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="11.0" top="26.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="-20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/udawalawa3.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Udawalawe is home to Sri Lankan wildlife such as the Rusty-spotted Cat, Fishing Cat and the Sri Lankan Leopard. Other species include the Sri Lankan Sambar Deer, Sri Lankan Axis Deer, Indian Muntjac, Sri Lankan Spotted Chevrotain, Wild Boar and Water Buffalo. " textAlignment="JUSTIFY" wrappingWidth="700.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="An incredible total of 183 bird species have been recorded as inhabiting the Park, wile many others pass through on their migratory routes, making Udawalawe a great place for a memorable bird safari." textAlignment="JUSTIFY" wrappingWidth="700.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="11.0" top="26.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="-20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Endemic Flora in Udawalawe National Park Sri Lanka is rich and varied. Originally densely forested, savannah grasslands and thorn-scrub now predominate the Park. Much of the forest was destroyed by chena - slash and burn - cultivation. Scattered trees, constituting 20 – 50 percent of existing cover, are mainly Satin, Ehala and Lunumidella. In the riverine forest, Kumbuk and the endemic Mandorang trees are dominant." textAlignment="JUSTIFY" wrappingWidth="650.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="158.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/udawalawa4.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="11.0" top="26.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="-20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
    </children>
+   <VBox.margin>
+      <Insets bottom="11.0" top="26.0" />
+   </VBox.margin>
 </AnchorPane>
