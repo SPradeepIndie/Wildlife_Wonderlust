@@ -52,7 +52,7 @@ INSERT INTO Hotel VALUES ('h01', 'Starlight Retreat'),
 
 
 CREATE TABLE Price(h_id char(3), l_id char(9), p_name char(20), price int,PRIMARY KEY(h_id,l_id,p_name));
-INSERT INTO Hotel VALUES
+INSERT INTO Price VALUES
                     ("h01", "Location1", "silver", 2345),
                     ("h02", "Location1", "silver", 2345),
                     ("h03", "Location1", "silver", 2789),
