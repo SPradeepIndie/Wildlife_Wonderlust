@@ -11,20 +11,13 @@
 
 <AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="IS YALA HOT ?">
-                     <font>
-                        <Font size="43.0" />
-                     </font>
-                  </Text>
-               </children>
-               <VBox.margin>
-                  <Insets top="41.0" />
-               </VBox.margin>
-            </HBox>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="IS YALA HOT ?">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Text>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <ImageView fitHeight="378.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
@@ -36,24 +29,20 @@
                      <font>
                         <Font size="20.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin>
                   </Text>
                </children>
                <VBox.margin>
                   <Insets top="41.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <ImageView fitHeight="312.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/yala4.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-               <VBox.margin>
-                  <Insets top="41.0" />
-               </VBox.margin>
-            </HBox>
+            <ImageView fitHeight="412.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/yala4.jpg" />
+               </image>
+            </ImageView>
          </children>
       </VBox>
    </children>

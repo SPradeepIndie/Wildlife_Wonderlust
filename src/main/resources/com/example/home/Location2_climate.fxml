@@ -12,18 +12,14 @@
 
 <AnchorPane nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Label text="CLIMATE at KUMANA National Park.." textFill="WHITE">
-                     <font>
-                        <Font size="43.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="696.0" text="CLIMATE at KUMANA National Park.." textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Around 20 lagoons and tanks support the extensive birdlife of the Kumana National Park. The Kumana Villu is subject to occasional inundation with seawater. The elevation of the area ranges from sea level to 90 metres, the mean annual temperature is 27°C and the area receives 1,300 mm of annual rainfall." textAlignment="JUSTIFY" wrappingWidth="450.0">
                      <font>
@@ -40,18 +36,14 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <Label alignment="TOP_CENTER" text="The BEST TIME to VISIT Kmana National Park.." textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Label alignment="TOP_CENTER" text="The BEST TIME to VISIT Kmana National Park.." textFill="WHITE">
-                     <font>
-                        <Font size="43.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <ImageView fitHeight="323.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="453.0" fitWidth="381.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Image/kumana4.jpg" />
                      </image>

@@ -11,18 +11,14 @@
 
 <AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Label text="Climate at Sinharaja Rain Forest..." textFill="WHITE">
-                     <font>
-                        <Font size="43.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <Label text="Climate at Sinharaja Rain Forest..." textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="215.0" fitWidth="313.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -36,33 +32,21 @@
                   </Text>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Label text="The Best TIME to Visit SINHARAJA.." textFill="WHITE">
-                     <font>
-                        <Font size="43.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <ImageView fitHeight="272.0" fitWidth="697.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/sinharaja5.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="It rains in Sinharaja pretty much throughout the year, though the chances of rain are less during the months of December to April and July to August." textAlignment="JUSTIFY" wrappingWidth="750.0">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
+            <Label text="The Best TIME to Visit SINHARAJA.." textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="272.0" fitWidth="697.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/sinharaja5.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="It rains in Sinharaja pretty much throughout the year, though the chances of rain are less during the months of December to April and July to August." textAlignment="JUSTIFY" wrappingWidth="750.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
          </children>
       </VBox>
    </children>

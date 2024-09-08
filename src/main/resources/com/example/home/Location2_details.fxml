@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,46 +12,37 @@
 
 <AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <ImageView fitHeight="498.0" fitWidth="1133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/kumana1.jpg" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="KUMANA NATIONAL PARK" textAlignment="CENTER" wrappingWidth="1133.2333984375">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kumana National Park spreads over an area of 35,664 hectares. In the west, the park is bordered by River Kumubukkan Oya; to the south is south-eastern coast that runs to Panama. A 200 hectares mangrove swamp called “Kumana Villu” within the Park is subject to occasional inundation with sea water. It is at this swamp that many water birds nest, during the months of May and June. Scattered in the Kumana National Park are several water pools that are favorite spots of the wildlife: Kudawila wewa, Thummulla wewa and Kotalinda wewa." textAlignment="JUSTIFY" wrappingWidth="1137.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="498.0" fitWidth="1133.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/kumana1.jpg" />
-                     </image>
-                     <viewport>
-                        <Rectangle2D />
-                     </viewport>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="KUMANA NATIONAL PARK">
-                     <font>
-                        <Font size="58.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kumana National Park spreads over an area of 35,664 hectares. In the west, the park is bordered by River Kumubukkan Oya; to the south is south-eastern coast that runs to Panama. A 200 hectares mangrove swamp called “Kumana Villu” within the Park is subject to occasional inundation with sea water. It is at this swamp that many water birds nest, during the months of May and June. Scattered in the Kumana National Park are several water pools that are favorite spots of the wildlife: Kudawila wewa, Thummulla wewa and Kotalinda wewa." textAlignment="JUSTIFY" wrappingWidth="900.0">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="A total of 255 species of birds have been recorded in Kumana. Regular sightings include species such as Pelicans, Painted Storks, Spoonbills, White Ibis and Cormorants. The very rare Black-necked Stork has also been spotted in the swamp. Besides the prolific birdlife, Kumana is also home to some of the mammals found in the neighbouring Yala National Park such as elephants and leopards which can also be seen on safari. Other animals which reside inside the Kumana National Park include the Golden Jackal and the European Otter. It is also reported that approximately 30 to 40 Sri Lankan Elephants reside in the Park, although they do crossover to Yala." textAlignment="JUSTIFY" wrappingWidth="737.0">
                      <font>
                         <Font size="17.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets top="89.0" />
+                     </HBox.margin>
                   </Text>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="A total of 255 species of birds have been recorded in Kumana. Regular sightings include species such as Pelicans, Painted Storks, Spoonbills, White Ibis and Cormorants. The very rare Black-necked Stork has also been spotted in the swamp. Besides the prolific birdlife, Kumana is also home to some of the mammals found in the neighbouring Yala National Park such as elephants and leopards which can also be seen on safari. Other animals which reside inside the Kumana National Park include the Golden Jackal and the European Otter. It is also reported that approximately 30 to 40 Sri Lankan Elephants reside in the Park, although they do crossover to Yala." wrappingWidth="450.0">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="379.0" fitWidth="393.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="368.0" fitWidth="471.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Image/kumana2.jpg" />
                      </image>

@@ -11,36 +11,24 @@
 
 <AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <ImageView fitHeight="524.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/wilpattu1.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Label text="WILPATTU NATIONAL PARK" textFill="WHITE">
-                     <font>
-                        <Font size="58.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Due to the fewer number of visitors, the wildlife within the confines of the Wilpattu National Park has hardly had contact with humans. The animals are therefore often shy, unlike those in Yala, making the need for an experienced guide even greater, one which Mahoora can provide. 4WD safari jeeps are the best way in which to explore the varied terrain." textAlignment="JUSTIFY" wrappingWidth="900.0">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <ImageView fitHeight="524.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/wilpattu1.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="1047.0" text="WILPATTU NATIONAL PARK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Due to the fewer number of visitors, the wildlife within the confines of the Wilpattu National Park has hardly had contact with humans. The animals are therefore often shy, unlike those in Yala, making the need for an experienced guide even greater, one which Mahoora can provide. 4WD safari jeeps are the best way in which to explore the varied terrain." textAlignment="JUSTIFY" wrappingWidth="900.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The Sri Lankan Leopard is a recognised subspecies of the Indian Leopard and is currently the largest species of leopard living in Asia. The Wilpattu National Park is known for its numerous opportunities to film and photograph these wonderful animals which are often seen lying beside the Park’s many villus." textAlignment="JUSTIFY" wrappingWidth="600.0">
                      <font>
@@ -54,7 +42,7 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="163.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -68,7 +56,7 @@
                   </Text>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Many species of Sri Lankan flora can be identified inside the Wilpattu National Park, with 3 distinct types of vegetation being prominent – salt grass, stunted shrub bordering the coastal areas (a coastal strip of approximately 3 to 6 miles of monsoon scrub), and dense monsoon forests further inland. Many species of flora can be identified at the Wilpattu National Park such as Palu (Manilkara hexandra)," textAlignment="JUSTIFY" wrappingWidth="650.0">
                      <font>
