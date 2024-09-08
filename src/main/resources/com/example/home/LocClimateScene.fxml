@@ -10,9 +10,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" style="-fx-background-color: red;" stylesheets="@CSS/Home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" style="-fx-background-color: red;" stylesheets="@CSS/Home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <VBox prefHeight="200.0" styleClass="bgColor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-
         <HBox alignment="CENTER" prefHeight="42.0" spacing="39.0" styleClass="bgColor">
             <VBox.margin>
                 <Insets bottom="11.0" right="40.0" top="12.0" />
@@ -70,7 +69,10 @@
             <VBox.margin>
                 <Insets left="17.0" right="17.0" />
             </VBox.margin>
-            <ScrollPane fx:id="scrllPaneContent" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="574.0" styleClass="bgColor" vbarPolicy="ALWAYS" HBox.hgrow="ALWAYS" />
+            <ScrollPane fx:id="scrllPaneContent" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="574.0" styleClass="bgColor" vbarPolicy="ALWAYS" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+               <Insets bottom="50.0" />
+            </HBox.margin></ScrollPane>
 
         </HBox>
     </VBox>

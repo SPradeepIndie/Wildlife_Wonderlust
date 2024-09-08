@@ -101,6 +101,7 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("WelcomePage/Welcome.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setResizable(false);//close resize option
         stage.setScene(scene);
         stage.show();
     }
@@ -116,8 +117,7 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
         root = fxmlLoader.load();  // Load the scene
         controller.addDetailContent();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.getScene().setRoot(root);
         stage.show();
     }
 

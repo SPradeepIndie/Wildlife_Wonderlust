@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,35 +9,24 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="IS YALA HOT ?">
-               <font>
-                  <Font size="43.0" />
-               </font>
-            </Text>
-            <HBox alignment="TOP_CENTER" spacing="30.0">
-
-               <children>
-                  <ImageView fitHeight="378.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/yala3.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Yala is in a hot, semi-arid environment despite its lush greenish look, especially during the monsoon season. Temperature ranges from 260C to about 300C. The North-east monsoon season is when Yala gets most of its rainfall from September to December." textAlignment="JUSTIFY" wrappingWidth="300.0">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <ImageView fitHeight="312.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Image/yala4.jpg" />
-               </image>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="IS YALA HOT ?">
+            <font>
+                <Font size="58.0" />
+            </font>
+        </Text>
+        <HBox alignment="TOP_CENTER" spacing="30.0">
+            <ImageView fitHeight="378.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@Image/yala3.jpg" />
             </ImageView>
-         </children>
-      </VBox>
-   </children>
+            <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yala is in a hot, semi-arid environment despite its lush greenish look, especially during the monsoon season. Temperature ranges from 260C to about 300C. The North-east monsoon season is when Yala gets most of its rainfall from September to December." textAlignment="JUSTIFY" wrappingWidth="300.0">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Text>
+        </HBox>
+        <ImageView fitHeight="312.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Image/yala4.jpg" />
+        </ImageView>
+    </VBox>
 </AnchorPane>

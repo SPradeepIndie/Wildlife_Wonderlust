@@ -24,6 +24,7 @@ public class LocClimateSceneController extends DetailsHndling {
         Parent root = FXMLLoader.load(getClass().getResource("WelcomePage/Welcome.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setResizable(false);//close resize option
         stage.setScene(scene);
         stage.show();
     }
@@ -39,16 +40,14 @@ public class LocClimateSceneController extends DetailsHndling {
         controller.addDetailContent();
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.getScene().setRoot(root);
         stage.show();
     }
 
     public void plan(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("LocPlanScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.getScene().setRoot(root);
         stage.show();
     }
     public void addClimateContent(){

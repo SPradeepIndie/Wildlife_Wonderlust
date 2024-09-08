@@ -9,63 +9,47 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="342.0" fitWidth="1058.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Image/sinharaja1.jpg" />
-               </image>
-            </ImageView>
-            <Label text="SINHARAJA RAIN FOREST" textFill="WHITE">
+<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21">
+   <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="342.0" fitWidth="1058.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@Image/sinharaja1.jpg" />
+      </ImageView>
+      <Label text="SINHARAJA RAIN FOREST" textFill="WHITE">
+         <font>
+            <Font size="58.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This virgin rainforest has become one of Sri Lanka's major eco-tourism destinations. Described as both a Tropical Lowland Rainforest and a Tropical Wet Evergreen Forest, the Sinharaja forest is a vast repository of wildlife that is endemic to Sri Lanka. Preliminary studies on the fauna of Sinharaja have revealed that there is a high degree of endemism among the butterflies, fish, amphibians, reptiles, birds and mammals. Of the endemic birds, the rarest to be seen here are the Red Faced Malkoha, Green Billed Coucal and the Sri Lankan Blue Magpie. Endemism among mammals and butterflies is also greater than 50 percent." textAlignment="JUSTIFY" wrappingWidth="900.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+         <ImageView fitHeight="219.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Image/sinharaja2.jpg" />
+         </ImageView>
+         <VBox prefHeight="200.0" prefWidth="100.0" spacing="24.0">
+            <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It’s known that 95 percent of Sri Lanka’s endemic birds are present in Sinharaja, making it a birding expedition unlike any other. Another interesting sight to be found in Sinharaja is the presence of mixed species of foraging bird flocks, a phenomenon commonly found in rainforests." textAlignment="JUSTIFY" wrappingWidth="600.0">
                <font>
-                  <Font size="43.0" />
-               </font>
-            </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="This virgin rainforest has become one of Sri Lanka's major eco-tourism destinations. Described as both a Tropical Lowland Rainforest and a Tropical Wet Evergreen Forest, the Sinharaja forest is a vast repository of wildlife that is endemic to Sri Lanka. Preliminary studies on the fauna of Sinharaja have revealed that there is a high degree of endemism among the butterflies, fish, amphibians, reptiles, birds and mammals. Of the endemic birds, the rarest to be seen here are the Red Faced Malkoha, Green Billed Coucal and the Sri Lankan Blue Magpie. Endemism among mammals and butterflies is also greater than 50 percent." textAlignment="JUSTIFY" wrappingWidth="900.0">
-               <font>
-                  <Font size="17.0" />
+                  <Font size="22.0" />
                </font>
             </Text>
-            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <ImageView fitHeight="219.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/sinharaja2.jpg" />
-                     </image>
-                  </ImageView>
-                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="24.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="It’s known that 95 percent of Sri Lanka’s endemic birds are present in Sinharaja, making it a birding expedition unlike any other. Another interesting sight to be found in Sinharaja is the presence of mixed species of foraging bird flocks, a phenomenon commonly found in rainforests." textAlignment="JUSTIFY" wrappingWidth="600.0">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Text>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Although elephants were said to be common in the past, there have been fewer reported sightings in the Sinharaja forest reserve during the past 15 years. There is a small herd of Sri Lankan elephants that reside in Sinharaja, but sightings have become rare. Other animals that have been spotted are the Sambar Deer, the Mouse Deer, and Barking Deer." textAlignment="JUSTIFY" wrappingWidth="600.0">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The most common reptile is the Green Garden Lizard. The Calotes liolepis, an arboreal species, is the rarest of all agamids found on the island to reside within the Reserve. The only Tortoise recorded on the Reserve is the Hard-shelled Terrapin. Among the snakes, the Green Pit Viper and Hump-nosed Viper are commonly found in this forest and are endemic to Sri Lanka, along with 8 others; which include the endemic Torrent Toad and the common House Toad. The Wrinkled Frog and the Sri Lankan Reed Frog, too, are found in most streams and marshes within the Reserve." textAlignment="JUSTIFY" wrappingWidth="550.0">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="292.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/sinharaja3.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
+            <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Although elephants were said to be common in the past, there have been fewer reported sightings in the Sinharaja forest reserve during the past 15 years. There is a small herd of Sri Lankan elephants that reside in Sinharaja, but sightings have become rare. Other animals that have been spotted are the Sambar Deer, the Mouse Deer, and Barking Deer." textAlignment="JUSTIFY" wrappingWidth="600.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </VBox>
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+         <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The most common reptile is the Green Garden Lizard. The Calotes liolepis, an arboreal species, is the rarest of all agamids found on the island to reside within the Reserve. The only Tortoise recorded on the Reserve is the Hard-shelled Terrapin. Among the snakes, the Green Pit Viper and Hump-nosed Viper are commonly found in this forest and are endemic to Sri Lanka, along with 8 others; which include the endemic Torrent Toad and the common House Toad. The Wrinkled Frog and the Sri Lankan Reed Frog, too, are found in most streams and marshes within the Reserve." textAlignment="JUSTIFY" wrappingWidth="550.0">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Text>
+         <ImageView fitHeight="292.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Image/sinharaja3.jpg" />
+         </ImageView>
+      </HBox>
+   </VBox>
 </AnchorPane>

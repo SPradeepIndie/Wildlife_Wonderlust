@@ -32,6 +32,7 @@ public class LocDetailSceneController extends DetailsHndling{
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);//close resize option
         stage.show();
     }
 
@@ -47,16 +48,14 @@ public class LocDetailSceneController extends DetailsHndling{
         controller.addClimateContent();
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.getScene().setRoot(root);
         stage.show();
     }
 
     public void plan(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("LocPlanScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.getScene().setRoot(root);
         stage.show();
     }
 

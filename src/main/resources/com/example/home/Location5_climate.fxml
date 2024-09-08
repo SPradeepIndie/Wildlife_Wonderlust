@@ -9,63 +9,47 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label text="CLIMATE at UDAWALAWE National Park..." textFill="WHITE">
+<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label text="CLIMATE at UDAWALAWE National Park..." textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+         <ImageView fitHeight="325.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Image/udawalawa5.jpg" />
+         </ImageView>
+         <VBox prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+            <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The climate in the Park is characterised by seasonal rainfall and uniformly high temperature conditions. The average annual rainfall is about 1,500 mm in the south end, and it gradually increases towards the north. The annual average temperature is 32°C with no serious fluctuations being recorded." textAlignment="JUSTIFY" wrappingWidth="450.0">
                <font>
-                  <Font size="43.0" />
+                  <Font size="22.0" />
                </font>
-            </Label>
-            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <ImageView fitHeight="325.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/udawalawa5.jpg" />
-                     </image>
-                  </ImageView>
-                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="50.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The climate in the Park is characterised by seasonal rainfall and uniformly high temperature conditions. The average annual rainfall is about 1,500 mm in the south end, and it gradually increases towards the north. The annual average temperature is 32°C with no serious fluctuations being recorded." textAlignment="JUSTIFY" wrappingWidth="450.0">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Text>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Two rainfall peaks occur in a year, one between April and May and the other between October and November. A short dry spell is experienced between February and March, and a prolonged dry period is observed from mid-May until the end of September." textAlignment="JUSTIFY" wrappingWidth="450.0">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <Label text="Best TIME to VISIT Udawalawe.." textFill="WHITE">
+            </Text>
+            <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two rainfall peaks occur in a year, one between April and May and the other between October and November. A short dry spell is experienced between February and March, and a prolonged dry period is observed from mid-May until the end of September." textAlignment="JUSTIFY" wrappingWidth="450.0">
                <font>
-                  <Font size="43.0" />
+                  <Font size="22.0" />
                </font>
-            </Label>
-            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Elephants at Udawalawe can be seen all year round but migrant birds can only be seen from November to March. The best time to visit is during the dry season when elephants come out in large numbers to the waterholes." textAlignment="JUSTIFY" wrappingWidth="600.0">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="206.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Image/udawalawa6.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <ImageView fitHeight="185.0" fitWidth="617.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Image/udawalawa7.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </VBox>
-   </children>
+            </Text>
+         </VBox>
+      </HBox>
+      <Label text="Best TIME to VISIT Udawalawe.." textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+         <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elephants at Udawalawe can be seen all year round but migrant birds can only be seen from November to March. The best time to visit is during the dry season when elephants come out in large numbers to the waterholes." textAlignment="JUSTIFY" wrappingWidth="600.0">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Text>
+         <ImageView fitHeight="206.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Image/udawalawa6.jpg" />
+         </ImageView>
+      </HBox>
+      <ImageView fitHeight="185.0" fitWidth="617.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@Image/udawalawa7.jpg" />
+      </ImageView>
+   </VBox>
 </AnchorPane>
