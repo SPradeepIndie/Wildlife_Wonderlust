@@ -4,56 +4,73 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1271.0" prefWidth="1046.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="524.0" fitWidth="1046.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/wilpattu1.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="145.0" layoutY="593.0" text="WILPATTU NATIONAL PARK" textFill="WHITE">
-         <font>
-            <Font size="58.0" />
-         </font>
-      </Label>
-      <Text fill="WHITE" layoutX="61.0" layoutY="731.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due to the fewer number of visitors, the wildlife within the confines of the Wilpattu National Park has hardly had contact with humans. The animals are therefore often shy, unlike those in Yala, making the need for an experienced guide even greater, one which Mahoora can provide. 4WD safari jeeps are the best way in which to explore the varied terrain." textAlignment="JUSTIFY" wrappingWidth="900.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="61.0" layoutY="838.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Sri Lankan Leopard is a recognised subspecies of the Indian Leopard and is currently the largest species of leopard living in Asia. The Wilpattu National Park is known for its numerous opportunities to film and photograph these wonderful animals which are often seen lying beside the Park’s many villus." textAlignment="JUSTIFY" wrappingWidth="600.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="170.0" fitWidth="226.0" layoutX="776.0" layoutY="801.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/wilpattu2.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="163.0" fitWidth="252.0" layoutX="61.0" layoutY="955.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/wilpattu3.jpg" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" layoutX="357.0" layoutY="1006.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On a Wilpattu safari you have the chance of encountering 31 species of mammals residing within Wilpattu, of which 4 are threatened. These are the Sri Lankan Elephant, Sri Lankan Sloth Bear, Sri Lankan Leopard and the Water Buffalo. Other animal species that can be seen on safari drives are the Sambar and Spotted Deer, Mongoose, Mouse Deer, and Shrew." textAlignment="JUSTIFY" wrappingWidth="600.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="61.0" layoutY="1161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Many species of Sri Lankan flora can be identified inside the Wilpattu National Park, with 3 distinct types of vegetation being prominent – salt grass, stunted shrub bordering the coastal areas (a coastal strip of approximately 3 to 6 miles of monsoon scrub), and dense monsoon forests further inland. Many species of flora can be identified at the Wilpattu National Park such as Palu (Manilkara hexandra)," textAlignment="JUSTIFY" wrappingWidth="650.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="113.0" fitWidth="245.0" layoutX="712.0" layoutY="1134.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/wilpattu4.jpg" />
-         </image>
-      </ImageView>
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="524.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/wilpattu1.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="1047.0" text="WILPATTU NATIONAL PARK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Due to the fewer number of visitors, the wildlife within the confines of the Wilpattu National Park has hardly had contact with humans. The animals are therefore often shy, unlike those in Yala, making the need for an experienced guide even greater, one which Mahoora can provide. 4WD safari jeeps are the best way in which to explore the varied terrain." textAlignment="JUSTIFY" wrappingWidth="900.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The Sri Lankan Leopard is a recognised subspecies of the Indian Leopard and is currently the largest species of leopard living in Asia. The Wilpattu National Park is known for its numerous opportunities to film and photograph these wonderful animals which are often seen lying beside the Park’s many villus." textAlignment="JUSTIFY" wrappingWidth="600.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="170.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/wilpattu2.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/wilpattu3.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="On a Wilpattu safari you have the chance of encountering 31 species of mammals residing within Wilpattu, of which 4 are threatened. These are the Sri Lankan Elephant, Sri Lankan Sloth Bear, Sri Lankan Leopard and the Water Buffalo. Other animal species that can be seen on safari drives are the Sambar and Spotted Deer, Mongoose, Mouse Deer, and Shrew." textAlignment="JUSTIFY" wrappingWidth="600.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Many species of Sri Lankan flora can be identified inside the Wilpattu National Park, with 3 distinct types of vegetation being prominent – salt grass, stunted shrub bordering the coastal areas (a coastal strip of approximately 3 to 6 miles of monsoon scrub), and dense monsoon forests further inland. Many species of flora can be identified at the Wilpattu National Park such as Palu (Manilkara hexandra)," textAlignment="JUSTIFY" wrappingWidth="650.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="113.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/wilpattu4.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

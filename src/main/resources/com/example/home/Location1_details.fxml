@@ -10,43 +10,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1271.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="1522.0" prefWidth="1048.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="200.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <ImageView fitHeight="589.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
-                     <image>
-                        <Image url="@Image/yala1.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <Label text="YALA NATIONAL PARK" textFill="WHITE">
-                     <font>
-                        <Font size="58.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yala combines a strict nature reserve with a national park. Divided into 5 blocks, the park has a protected area of nearly 130,000 hectares of land consisting of light forests, scrubs, grasslands, tanks and lagoons. Two blocks are currently opened to the public.Situated in Sri Lanka’s south-east hugging the panoramic Indian Ocean, Yala was designated a wildlife sanctuary in 1900 and was designated a national park in 1938. Ironically, the park was initially used as a hunting ground for the elite under British rule. Yala is home to 44 varieties of mammal and 215 bird species. Among its more famous residents are the world’s biggest concentration of leopards, majestic elephants, sloth bears, sambars, jackals, spotted dear, peacocks, and crocodiles. The best time to visit Yala is between February and July when the water levels of the park are quite low, bringing animals into the open." wrappingWidth="900.0">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Text>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin>
-            </HBox>
+            <ImageView fitHeight="589.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/yala1.jpg" />
+               </image>
+            </ImageView>
+            <Label text="YALA NATIONAL PARK" textFill="WHITE">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yala combines a strict nature reserve with a national park. Divided into 5 blocks, the park has a protected area of nearly 130,000 hectares of land consisting of light forests, scrubs, grasslands, tanks and lagoons. Two blocks are currently opened to the public.Situated in Sri Lanka’s south-east hugging the panoramic Indian Ocean, Yala was designated a wildlife sanctuary in 1900 and was designated a national park in 1938. Ironically, the park was initially used as a hunting ground for the elite under British rule. Yala is home to 44 varieties of mammal and 215 bird species. Among its more famous residents are the world’s biggest concentration of leopards, majestic elephants, sloth bears, sambars, jackals, spotted dear, peacocks, and crocodiles. The best time to visit Yala is between February and July when the water levels of the park are quite low, bringing animals into the open." wrappingWidth="900.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
             <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="277.0" fitWidth="421.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="277.0" fitWidth="432.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Image/yala2.jpg" />
                      </image>
@@ -55,6 +40,9 @@
                      <font>
                         <Font size="22.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets top="16.0" />
+                     </HBox.margin>
                   </Text>
                </children>
             </HBox>
