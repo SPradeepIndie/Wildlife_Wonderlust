@@ -1,44 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1046.0" style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="46.0" layoutY="32.0" text="CLIMATE at WILPATTU National Park.." textFill="WHITE">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="250.0" fitWidth="676.0" layoutX="185.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/wilpattu5.jpg" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" layoutX="123.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The annual temperature in the Park is around 27°C and its annual rainfall is approximately 1,000 mm. Though situated in the dry zone, the climate inside the Wilpattu National Park is very unlike that of the dry zone. The period from September to December is known as the rainy season in Wilpattu with the north east monsoon falling heavily. Inter-monsoonal rains come to Wilpattu between March and April. The period of drought in the Park extends from May to early September. Thus the best time for wildlife safaris at the Wilpattu National Park is during the months of February and October." textAlignment="JUSTIFY" wrappingWidth="800.0">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Text>
-      <Label layoutX="46.0" layoutY="618.0" text="Best TIME to Visit.." textFill="WHITE">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Label>
-      <Text fill="WHITE" layoutX="123.0" layoutY="763.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This National Park can be visited throughout the year but for that optimal safari experience, a visit during the months of February and October is recommended." wrappingWidth="450.0">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="279.0" fitWidth="480.0" layoutX="644.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Image/wilpattu6.jpg" />
-         </image>
-      </ImageView>
+      <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="64.0" prefWidth="800.0" text="CLIMATE at WILPATTU National Park.." textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="293.0" fitWidth="799.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/wilpattu5.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The annual temperature in the Park is around 27°C and its annual rainfall is approximately 1,000 mm. Though situated in the dry zone, the climate inside the Wilpattu National Park is very unlike that of the dry zone. The period from September to December is known as the rainy season in Wilpattu with the north east monsoon falling heavily. Inter-monsoonal rains come to Wilpattu between March and April. The period of drought in the Park extends from May to early September. Thus the best time for wildlife safaris at the Wilpattu National Park is during the months of February and October." textAlignment="JUSTIFY" wrappingWidth="800.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" spacing="6.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Best TIME to Visit.." textFill="WHITE">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="This National Park can be visited throughout the year but for that optimal safari experience, a visit during the months of February and October is recommended." wrappingWidth="409.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="41.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="340.0" fitWidth="349.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/wilpattu6.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
