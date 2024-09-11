@@ -20,7 +20,7 @@
       </ImageView>
       <Label text="UDAWALAWE NATIONAL PARK" textFill="WHITE">
          <font>
-            <Font size="58.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Udawalawe National Park is the third most visited Park in Sri Lanka. The varied habitats in Udawalawe make it home to a diverse spectrum of animals. The main attraction at Udawalawe however are the elephants, with a herd of 600 to 700 elephants believed to be residents of the Park. The Udawalawe National Park is home to many more species of Sri Lankan wildlife which include the endemic Toque Macaque and the Sri Lankan Leopard – though the latter is seen very rarely. The Sri Lankan Sloth Bear has been recorded as well, but it is seldom seen. There are numerous species of birds, some of which are endemic along with fish, reptiles and amphibians." textAlignment="JUSTIFY" wrappingWidth="900.0">

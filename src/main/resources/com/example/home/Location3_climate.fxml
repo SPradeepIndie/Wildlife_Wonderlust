@@ -12,9 +12,9 @@
 
 <AnchorPane style="-fx-background-color: #213363;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="64.0" prefWidth="800.0" text="CLIMATE at WILPATTU National Park.." textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="CENTER" text="CLIMATE at WILPATTU National Park.." textAlignment="CENTER" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
          <font>
-            <Font size="58.0" />
+            <Font size="43.0" />
          </font>
       </Label>
       <ImageView fitHeight="293.0" fitWidth="799.0" pickOnBounds="true" preserveRatio="true">
@@ -25,8 +25,8 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <HBox alignment="TOP_CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
-         <VBox alignment="TOP_CENTER" spacing="6.0" HBox.hgrow="ALWAYS">
+      <HBox alignment="TOP_CENTER" fillHeight="false" spacing="50.0">
+         <VBox alignment="TOP_CENTER" spacing="6.0" HBox.hgrow="NEVER">
             <Label text="Best TIME to Visit.." textFill="WHITE">
                <font>
                   <Font size="43.0" />

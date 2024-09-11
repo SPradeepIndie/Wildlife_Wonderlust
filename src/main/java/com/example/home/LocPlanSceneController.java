@@ -1,6 +1,6 @@
 package com.example.home;
 
-import com.example.home.model.DbConnection;
+import com.example.home.databaseConfig.DbConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.*;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.stream.IntStream;
 
 public class LocPlanSceneController extends DetailsHndling implements Initializable {
     private DbConnection dbConnection;
@@ -65,17 +65,16 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
     //injector for ChoiceBox
     @FXML
     private ChoiceBox<String> hotelChoBox;
+    @FXML
+    private ChoiceBox<Integer> dayChoBox;
+    @FXML
+    private ChoiceBox<Integer> memberChoBox;
+    private int maxDays;
+    private int maxMembers;
 
     //injector for myPrice label
     @FXML
     private Label myPrice;
-
-    //Injector for days label
-    @FXML
-    private TextField dayTextField;
-    //Injector for members label
-    @FXML
-    private TextField memberTextField;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -87,6 +86,8 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
         setPkgNameGlobal("silver");
         setMaxPrice();
         setHotelList();
+        setDayList();
+        setMemberList();
     }
 
     public String getPkgNameGlobal() {
@@ -120,7 +121,6 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
         stage.getScene().setRoot(root);
         stage.show();
     }
-
     public void setMaxPrice(){
         query = "SELECT * FROM Package WHERE l_id = ? AND p_name=?;";
 
@@ -133,6 +133,8 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
             rs=ps.executeQuery();
             if(rs.next()){
                 String maxPriceStr=rs.getString("price");
+                maxDays= rs.getInt("max_days");
+                maxMembers= rs.getInt("max_members");
                 maxPrice=Double.parseDouble(maxPriceStr);
                 maxPriceLbl.setText(maxPriceStr);
 
@@ -141,6 +143,7 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
             throw new RuntimeException(e);
         }
     }
+
     public void setHotelList(){
         query = "SELECT h.h_name FROM Hotel h INNER JOIN Price p ON h.h_id = p.h_id WHERE p.l_id = ? AND p.p_name = ?;";
         try {
@@ -155,10 +158,19 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
             throw new RuntimeException(e);
         }
     }
+    public void setDayList(){
+        List<Integer> list = IntStream.rangeClosed(1, maxDays).boxed().toList();
+        dayChoBox.getItems().addAll(list);
+    }
+    public void setMemberList(){
+        List<Integer> list = IntStream.rangeClosed(1, maxMembers).boxed().toList();
+        memberChoBox.getItems().addAll(list);
+    }
+
     @FXML
     public void priceCal(ActionEvent event){
-        double dayCount=1.0;
-        double memberCount=1.0;
+        int dayCount=1;
+        int memberCount=1;
         query =  "SELECT price FROM Hotel h INNER JOIN Price p ON h.h_id = p.h_id WHERE h.h_name=? AND p.p_name =?;";
         try {
             ps= conn.prepareStatement(query);
@@ -167,18 +179,13 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
             rs=ps.executeQuery();
             if(rs.next()){
                 double oneD_oneM= Double.parseDouble(rs.getString("price"));
-                if(!Objects.equals(dayTextField.getText(), "") && !Objects.equals(memberTextField.getText(), "")) {
-                    dayCount = Double.parseDouble(dayTextField.getText());
-                    memberCount = Double.parseDouble(memberTextField.getText());
+                dayCount = dayChoBox.getSelectionModel().getSelectedItem();
+                memberCount = memberChoBox.getSelectionModel().getSelectedItem();
+                double calVal=oneD_oneM*memberCount*dayCount;
+                if(calVal>maxPrice){
+                    myPrice.setText("Price is too high,select next package");
                 }
                 else{
-                    setFieldValue("1");
-                }
-                double calVal=oneD_oneM*memberCount*dayCount;
-
-                if(calVal>maxPrice){
-                    myPrice.setText("price is too high! Select next package");
-                }else{
                     myPrice.setText(String.valueOf(calVal));
                 }
 
@@ -190,25 +197,23 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
         }
     }
 
-    public void setFieldValue(String val){
-        dayTextField.setText(val);
-        memberTextField.setText(val);
-    }
-
     //remove the choice box item before load the new items to it
     public void removeFromChoiceBox(){
-        List<String> itemsToRemove = new ArrayList<>();
-        for (String item : hotelChoBox.getItems()) {
-                itemsToRemove.add(item);
-        }
+        List<String> itemsToRemove = new ArrayList<>(hotelChoBox.getItems());
         hotelChoBox.getItems().removeAll(itemsToRemove);
+
+        List<Integer> integerItemsToRemove = new ArrayList<>(dayChoBox.getItems());
+        dayChoBox.getItems().removeAll(integerItemsToRemove);
+        integerItemsToRemove.addAll(memberChoBox.getItems());
+        memberChoBox.getItems().removeAll(integerItemsToRemove);
     }
     public void gold(ActionEvent event){
         removeFromChoiceBox();
         setPkgNameGlobal("gold");
-        setFieldValue("");
         setMaxPrice();
         setHotelList();
+        setDayList();
+        setMemberList();
         planVboxContainer.getStyleClass().remove("platinumImg");
         planVboxContainer.getStyleClass().remove("silverImg");
         planVboxContainer.getStyleClass().add("goldImg");
@@ -220,9 +225,10 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
     public void platinum(ActionEvent event){
         removeFromChoiceBox();
         setPkgNameGlobal("platinum");
-        setFieldValue("");
         setMaxPrice();
         setHotelList();
+        setDayList();
+        setMemberList();
         planVboxContainer.getStyleClass().remove("goldImg");
         planVboxContainer.getStyleClass().remove("silverImg");
         planVboxContainer.getStyleClass().add("platinumImg");
@@ -234,9 +240,10 @@ public class LocPlanSceneController extends DetailsHndling implements Initializa
     public void silver(ActionEvent event)  {
         removeFromChoiceBox();
         setPkgNameGlobal("silver");
-        setFieldValue("");
         setMaxPrice();
         setHotelList();
+        setDayList();
+        setMemberList();
         planVboxContainer.getStyleClass().remove("goldImg");
         planVboxContainer.getStyleClass().remove("platinumImg");
         planVboxContainer.getStyleClass().add("silverImg");

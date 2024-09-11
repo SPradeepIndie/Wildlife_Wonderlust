@@ -1,5 +1,6 @@
 package com.example.home;
 
+import com.example.home.dbInteraction.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -25,6 +26,16 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        DatabaseCreate databaseCreate=new DatabaseCreate();
+        HotelTableCreate hotelTableCreate=new HotelTableCreate();
+        LocationTableCreate locationTableCreate=new LocationTableCreate();
+        PackageTableCreate packageTableCreate=new PackageTableCreate();
+        PriceTableCreate priceTableCreate=new PriceTableCreate();
+        databaseCreate.createDatabase();
+        hotelTableCreate.createTable();
+        locationTableCreate.createTable();
+        packageTableCreate.createTable();
+        priceTableCreate.createTable();
         launch(args);
     }
 }

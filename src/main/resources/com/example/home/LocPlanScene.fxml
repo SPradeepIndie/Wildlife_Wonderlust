@@ -6,7 +6,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -87,114 +86,98 @@
         <HBox prefHeight="100.0" prefWidth="1046.0" styleClass="bgColor" VBox.vgrow="ALWAYS">
             <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="574.0" prefWidth="1046.0" styleClass="bgColor" vbarPolicy="ALWAYS" HBox.hgrow="ALWAYS">
                  <VBox fx:id="planVboxContainer" maxHeight="-Infinity" prefHeight="574.0" prefWidth="1046.0" spacing="18.0" stylesheets="@CSS/Plan.css">
-                     <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="1046.0"
-                           style="-fx-padding: 0;">
+                     <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="1046.0" style="-fx-padding: 0;">
                          <Label fx:id="locationNameLabel" text="Location" textFill="WHITE">
                              <font>
-                                 <Font name="System Bold" size="36.0"/>
+                                 <Font name="System Bold" size="36.0" />
                              </font>
                          </Label>
                      </HBox>
                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="50.0" styleClass="price">
                          <Label minWidth="250.0" prefHeight="50.0" text="Maximum Price " HBox.hgrow="ALWAYS">
                              <font>
-                                 <Font name="Kristen ITC" size="31.0"/>
+                                 <Font name="Kristen ITC" size="31.0" />
                              </font>
                          </Label>
                          <Label fx:id="maxPriceLbl" text="10 000" HBox.hgrow="ALWAYS">
                              <font>
-                                 <Font size="31.0"/>
+                                 <Font size="31.0" />
                              </font>
                          </Label>
                      </HBox>
                      <VBox prefHeight="223.0" prefWidth="1046.0" styleClass="req">
                          <Label text="Your Requirement">
                              <font>
-                                 <Font name="System Bold" size="48.0"/>
+                                 <Font name="System Bold" size="48.0" />
                              </font>
                          </Label>
                          <HBox alignment="CENTER">
                              <padding>
-                                 <Insets left="20.0" right="20.0"/>
+                                 <Insets left="20.0" right="20.0" />
                              </padding>
                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                                  <Label fx:id="hotelName" text="Hotel Name" underline="true">
                                      <font>
-                                         <Font name="System Bold Italic" size="18.0"/>
+                                         <Font name="System Bold Italic" size="18.0" />
                                      </font>
                                  </Label>
-                                 <ChoiceBox fx:id="hotelChoBox" prefWidth="200.0"/>
-                                 <Label prefWidth="200.0" text="Select a hotel you wish to spend your time"
-                                        wrapText="true">
+                                 <ChoiceBox fx:id="hotelChoBox" prefWidth="200.0" />
+                                 <Label prefWidth="200.0" text="Select a hotel you wish to spend your time" wrapText="true">
                                      <font>
-                                         <Font name="System Bold" size="18.0"/>
+                                         <Font name="System Bold" size="18.0" />
                                      </font>
                                  </Label>
                              </VBox>
-                             <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0"
-                                   HBox.hgrow="ALWAYS">
+                             <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                                  <padding>
-                                     <Insets left="20.0" right="20.0"/>
+                                     <Insets left="20.0" right="20.0" />
                                  </padding>
                                  <Label fx:id="days" text="Days" underline="true">
                                      <font>
-                                         <Font name="System Bold Italic" size="18.0"/>
+                                         <Font name="System Bold Italic" size="18.0" />
                                      </font>
                                  </Label>
-                                 <TextField fx:id="dayTextField" prefWidth="200.0">
+                        <ChoiceBox fx:id="dayChoBox" prefWidth="200.0" />
+                                 <Label prefWidth="200.0" text="How  many days do you wish to stay" wrapText="true">
                                      <font>
-                                         <Font name="System Bold" size="14.0"/>
-                                     </font>
-                                 </TextField>
-                                 <Label prefWidth="200.0" text="How  many days do you wish to stay"
-                                        wrapText="true">
-                                     <font>
-                                         <Font name="System Bold" size="18.0"/>
+                                         <Font name="System Bold" size="18.0" />
                                      </font>
                                  </Label>
                              </VBox>
-                             <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0"
-                                   HBox.hgrow="ALWAYS">
+                             <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                                  <padding>
-                                     <Insets left="20.0" right="20.0"/>
+                                     <Insets left="20.0" right="20.0" />
                                  </padding>
                                  <Label fx:id="members" text="Members" underline="true">
                                      <font>
-                                         <Font name="System Bold Italic" size="18.0"/>
+                                         <Font name="System Bold Italic" size="18.0" />
                                      </font>
                                  </Label>
-                                 <TextField fx:id="memberTextField" prefWidth="200.0">
-                                     <font>
-                                         <Font name="System Bold" size="14.0"/>
-                                     </font>
-                                 </TextField>
+                        <ChoiceBox fx:id="memberChoBox" prefWidth="200.0" />
                                  <Label prefWidth="200.0" text="How many members with you" wrapText="true">
                                      <font>
-                                         <Font name="System Bold" size="18.0"/>
+                                         <Font name="System Bold" size="18.0" />
                                      </font>
                                  </Label>
                              </VBox>
                          </HBox>
                          <HBox alignment="CENTER_RIGHT">
-                             <Button fx:id="priceCalBtn" mnemonicParsing="false" onAction="#priceCal"
-                                     styleClass="priceCalBtn" text="Make My Price" textFill="WHITE">
+                             <Button fx:id="priceCalBtn" mnemonicParsing="false" onAction="#priceCal" styleClass="priceCalBtn" text="Make My Price" textFill="WHITE">
                                  <font>
-                                     <Font name="System Bold" size="16.0"/>
+                                     <Font name="System Bold" size="16.0" />
                                  </font>
                              </Button>
                          </HBox>
                      </VBox>
-                     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="50.0"
-                           styleClass="price">
-                         <Label contentDisplay="CENTER" minWidth="250.0" prefHeight="56.0" text="Your Price  "
-                                textAlignment="CENTER" HBox.hgrow="NEVER">
+                     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="50.0" styleClass="price">
+                         <Label contentDisplay="CENTER" minWidth="250.0" prefHeight="56.0" text="Your Price  " textAlignment="CENTER" HBox.hgrow="NEVER">
                              <font>
-                                 <Font name="System Bold" size="39.0"/>
+                                 <Font name="System Bold" size="39.0" />
                              </font>
                          </Label>
                          <Label fx:id="myPrice" prefHeight="46.0" text="please select a hotel" HBox.hgrow="ALWAYS">
                              <font>
-                                 <Font name="System Bold" size="31.0"/>
+                                 <Font name="System Bold" size="31.0" />
                              </font>
                          </Label>
                      </HBox>

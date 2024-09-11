@@ -1,4 +1,4 @@
-package com.example.home.model;
+package com.example.home.databaseConfig;
 
 import java.sql.*;
 
@@ -9,7 +9,7 @@ public class DbConnection {
     private DbConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/wildLifeDB", "root", "");
+            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "");
             System.out.println("Connection successfull");
         } catch (ClassNotFoundException e) {
             System.out.println("Drivers not found");

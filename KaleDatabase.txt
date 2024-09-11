@@ -1,36 +1,24 @@
-CREATE DATABASE wildLifeDb;
-
-use wildLifeDb;
-
-CREATE TABLE location(l_id char(9) PRIMARY KEY, l_name varchar(40));
 INSERT INTO location VALUES	("Location1","YALA NATIONAL PARK"),
 			  	("Location2","KUMANA NATIONAL PARK"),
 				("Location3","WILPATTU NATIONAL PARK"),
 				("Location4","SINHARAJA RAIN FOREST"),
 				("Location5","UDAWALAWE NATIONAL PARK");
-
-
-
-CREATE TABLE Package(l_id char(9),p_name varchar(20), price int,PRIMARY KEY (l_id,p_name));
 INSERT INTO Package VALUES
-                ("Location1","silver",10000),
-				("Location1","gold",20000),
-				("Location1","platinum",30000),
-				("Location2","silver",15000),
-                ("Location2","gold",20000),
-                ("Location2","platinum",35000),
-                ("Location3","silver",8000),
-                ("Location3","gold",14000),
-                ("Location3","platinum",25000),
-                ("Location4","silver",17000),
-                ("Location4","gold",27000),
-                ("Location4","platinum",37000),
-                ("Location5","silver",14000),
-                ("Location5","gold",20000),
-                ("Location5","platinum",24000);
-
-
-CREATE TABLE Hotel(h_id char(3) PRIMARY KEY, h_name varchar(20));
+                ("Location1","silver",10000,1,2),
+				("Location1","gold",20000,3,3),
+				("Location1","platinum",30000,4,4),
+				("Location2","silver",15000,1,2),
+                ("Location2","gold",20000,2,2),
+                ("Location2","platinum",35000,5,5),
+                ("Location3","silver",8000,2,1),
+                ("Location3","gold",14000,3,2),
+                ("Location3","platinum",25000,4,2),
+                ("Location4","silver",17000,5,2),
+                ("Location4","gold",27000,2,4),
+                ("Location4","platinum",37000,4,4),
+                ("Location5","silver",14000,3,3),
+                ("Location5","gold",20000,3,5),
+                ("Location5","platinum",24000,1,2);
 INSERT INTO Hotel VALUES ('h01', 'Starlight Retreat'),
                           ('h02', 'Willow Grove Inn'),
                           ('h03', 'Azure Cove Resort'),
@@ -49,9 +37,6 @@ INSERT INTO Hotel VALUES ('h01', 'Starlight Retreat'),
                           ('h16', 'Oakwood Escape'),
                           ('h17', 'Ivory Towers Hotel'),
                           ('h18', 'Rosewood Retreat');
-
-
-CREATE TABLE Price(h_id char(3), l_id char(9), p_name char(20), price int,PRIMARY KEY(h_id,l_id,p_name));
 INSERT INTO Price VALUES
                     ("h01", "Location1", "silver", 2345),
                     ("h02", "Location1", "silver", 2345),

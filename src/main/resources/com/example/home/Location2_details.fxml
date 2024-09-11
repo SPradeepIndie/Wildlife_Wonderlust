@@ -23,7 +23,7 @@
             <Font size="58.0" />
          </font>
       </Text>
-      <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kumana National Park spreads over an area of 35,664 hectares. In the west, the park is bordered by River Kumubukkan Oya; to the south is south-eastern coast that runs to Panama. A 200 hectares mangrove swamp called “Kumana Villu” within the Park is subject to occasional inundation with sea water. It is at this swamp that many water birds nest, during the months of May and June. Scattered in the Kumana National Park are several water pools that are favorite spots of the wildlife: Kudawila wewa, Thummulla wewa and Kotalinda wewa." textAlignment="JUSTIFY" wrappingWidth="1137.0">
+      <Text fill="WHITE" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kumana National Park spreads over an area of 35,664 hectares. In the west, the park is bordered by River Kumubukkan Oya; to the south is south-eastern coast that runs to Panama. A 200 hectares mangrove swamp called “Kumana Villu” within the Park is subject to occasional inundation with sea water. It is at this swamp that many water birds nest, during the months of May and June. Scattered in the Kumana National Park are several water pools that are favorite spots of the wildlife: Kudawila wewa, Thummulla wewa and Kotalinda wewa." textAlignment="CENTER" wrappingWidth="1137.0" VBox.vgrow="ALWAYS">
          <font>
             <Font size="22.0" />
          </font>

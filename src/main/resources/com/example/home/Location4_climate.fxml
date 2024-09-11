@@ -26,7 +26,7 @@
             </font>
          </Text>
       </HBox>
-      <Label text="The Best TIME to Visit SINHARAJA.." textFill="WHITE">
+      <Label prefHeight="64.0" prefWidth="676.0" text="The Best TIME to Visit SINHARAJA.." textFill="WHITE">
          <font>
             <Font size="43.0" />
          </font>
